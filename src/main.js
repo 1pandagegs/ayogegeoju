@@ -26,7 +26,7 @@ document.querySelector('#app').innerHTML = `
   Work
   <span class="absolute left-0 -bottom-[18px] h-px w-full bg-[#3082BE]"></span>
 </a>
-<a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
+<a href="/about" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
 <a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
     </div>
 
