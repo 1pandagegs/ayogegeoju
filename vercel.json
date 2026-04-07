@@ -1,11 +1,15 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/work", "destination": "/work.html" },
-    { "source": "/work-home-and-abroad", "destination": "/work-home-and-abroad.html" },
-    { "source": "/work-hemo-trackr", "destination": "/work-hemo-trackr.html" },
-    { "source": "/work-coverage-trackr", "destination": "/work-coverage-trackr.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "handle": "filesystem" },
+
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/about$", "dest": "/about.html" },
+    { "src": "^/contact$", "dest": "/contact.html" },
+    { "src": "^/work$", "dest": "/work.html" },
+    { "src": "^/work-home-and-abroad$", "dest": "/work-home-and-abroad.html" },
+    { "src": "^/work-hemo-trackr$", "dest": "/work-hemo-trackr.html" },
+    { "src": "^/work-coverage-trackr$", "dest": "/work-coverage-trackr.html" }
   ]
 }
