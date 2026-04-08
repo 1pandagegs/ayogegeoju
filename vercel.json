@@ -1,15 +1,5 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "handle": "filesystem" },
-
-    { "src": "^/$", "dest": "/index.html" },
-    { "src": "^/about$", "dest": "/about.html" },
-    { "src": "^/contact$", "dest": "/contact.html" },
-    { "src": "^/work$", "dest": "/work.html" },
-    { "src": "^/work-home-and-abroad$", "dest": "/work-home-and-abroad.html" },
-    { "src": "^/work-hemo-trackr$", "dest": "/work-hemo-trackr.html" },
-    { "src": "^/work-coverage-trackr$", "dest": "/work-coverage-trackr.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html"}
   ]
-}
+} 
