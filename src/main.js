@@ -17,7 +17,7 @@ document.querySelector('#app').innerHTML = `
     <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/70 backdrop-blur-xl border-b border-white/5">
   <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
-    <a href="/index.html" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
+    <a href="/" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
       <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
     </a>
 
@@ -27,7 +27,7 @@ document.querySelector('#app').innerHTML = `
   <span class="absolute left-0 -bottom-[18px] h-px w-full bg-[#3082BE]"></span>
 </a>
 <a href="/about" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
-<a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
+<a href="/contact" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
     </div>
 
     <button
@@ -42,9 +42,9 @@ document.querySelector('#app').innerHTML = `
 
   <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
     <div class="flex flex-col gap-4 text-sm">
-      <a href="/work.html" class="text-white transition-colors duration-200">Work</a>
-<a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
-<a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
+      <a href="/work" class="text-white transition-colors duration-200">Work</a>
+<a href="/about" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
+<a href="/contact" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
     </div>
   </div>
 </nav>
@@ -72,7 +72,7 @@ document.querySelector('#app').innerHTML = `
     <span class="transition group-hover:translate-x-1">→</span>
   </a>
 
-  <a href="/contact.html"
+  <a href="/contact"
      class="group inline-flex items-center gap-2 text-sm font-medium text-[#3082BE] transition-colors duration-200 hover:text-white">
     Start a conversation
     <span class="transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -135,7 +135,7 @@ document.querySelector('#app').innerHTML = `
     title: "Home and Abroad",
     type: "PropTech / Real Estate",
     desc: "A diaspora-focused property platform designed to make remote property discovery feel more trustworthy, structured, and easier to navigate.",
-    href: "/work-home-and-abroad.html",
+    href: "/work-home-and-abroad",
     image: project1,
     preview: "property"
   },
@@ -144,7 +144,7 @@ document.querySelector('#app').innerHTML = `
     title: "Hemo Trackr",
     type: "HealthTech / System Design",
     desc: "A blood inventory and donor management experience built to improve visibility, speed up coordination, and support faster response in urgent situations.",
-    href: "/work-hemo-trackr.html",
+    href: "/work-hemo-trackr",
     image: project2,
     preview: "health"
   },
@@ -153,7 +153,7 @@ document.querySelector('#app').innerHTML = `
     title: "Coverage Trackr",
     type: "Operations / Planning Tool",
     desc: "A planning and monitoring tool created to support smarter operational decisions, better resource allocation, and clearer coverage visibility.",
-    href: "/work-coverage-trackr.html",
+    href: "/work-coverage-trackr",
     image: project3,
     preview: "coverage"
   },
@@ -162,7 +162,7 @@ document.querySelector('#app').innerHTML = `
     title: "More Projects",
     type: "Product Design / Digital Experience",
     desc: "Additional work across digital products, web experiences, interface systems, and design thinking for different industries and use cases.",
-    href: "/work.html",
+    href: "/work",
     image: project4,
     preview: "gallery"
   }
@@ -293,9 +293,9 @@ document.querySelector('#app').innerHTML = `
     </p>
 
     <div class="flex items-center gap-6 text-sm">
-      <a href="/work.html" class="text-slate-400 hover:text-white transition-colors duration-200">Work</a>
-      <a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
-      <a href="/contact.html" class="text-slate-500 hover:text-white transition-colors duration-200">Contact</a>
+      <a href="/work" class="text-slate-400 hover:text-white transition-colors duration-200">Work</a>
+      <a href="/about" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
+      <a href="/contact" class="text-slate-500 hover:text-white transition-colors duration-200">Contact</a>
     </div>
   </div>
 </footer>

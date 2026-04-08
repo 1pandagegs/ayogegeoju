@@ -11,17 +11,17 @@ document.querySelector('#app').innerHTML = `
 
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/70 backdrop-blur-xl border-b border-white/5">
   <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
-    <a href="/index.html" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
+    <a href="/" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
       <span class="text-[#3082BE]">AG.</span>
     </a>
 
     <div class="hidden md:flex items-center gap-8 text-[13px]">
-      <a href="/work.html" class="relative text-white transition-colors duration-200">
+      <a href="/work" class="relative text-white transition-colors duration-200">
   Work
   <span class="absolute left-0 -bottom-[18px] h-px w-full bg-[#3082BE]"></span>
 </a>
-<a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
-<a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
+<a href="/about" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
+<a href="/contact" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
     </div>
 
     <button
@@ -36,9 +36,9 @@ document.querySelector('#app').innerHTML = `
 
   <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
     <div class="flex flex-col gap-4 text-sm">
-      <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
-      <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
-      <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
+      <a href="/work" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
+      <a href="/about" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
+      <a href="/contact" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
     </div>
   </div>
 </nav>
@@ -47,7 +47,7 @@ document.querySelector('#app').innerHTML = `
       <div class="max-w-6xl mx-auto">
 
         <div class="mb-12 fade-up">
-          <a href="/index.html#work" class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors duration-200 mb-8">
+          <a href="/work" class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors duration-200 mb-8">
             <span class="transition-transform duration-200 group-hover:-translate-x-1">←</span>
             Back to work
           </a>
