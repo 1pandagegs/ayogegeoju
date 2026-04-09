@@ -1,4 +1,5 @@
 import './style.css'
+import logoImg from './assets/logo.png'
 
 document.querySelector('#app').innerHTML = `
   <div id="page-root" class="page-enter bg-[#020617] text-white selection:bg-[#3082BE] selection:text-black relative overflow-x-hidden">
@@ -13,13 +14,30 @@ document.querySelector('#app').innerHTML = `
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/70 backdrop-blur-xl border-b border-white/5">
       <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
         <a href="/index.html" class="inline-flex items-center gap-2 text-white">
-          <span class="text-[#3082BE]">AG.</span>
+          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
         </a>
 
-        <div class="hidden md:flex gap-8 text-sm">
-          <a href="/work.html" class="text-white">Work</a>
-          <a href="/about.html" class="text-slate-400 hover:text-white">About</a>
-          <a href="/contact.html" class="text-slate-400 hover:text-white">Contact</a>
+        <div class="hidden md:flex gap-8 text-[13px]">
+          <a href="/work.html" class="text-white hover:text-white transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
+        </div>
+
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white hover:bg-white/5 transition"
+        >
+          <span class="text-lg leading-none">☰</span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
+        <div class="flex flex-col gap-4 text-sm">
+          <a href="/work.html" class="text-white transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
         </div>
       </div>
     </nav>
@@ -51,9 +69,26 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-const toggle = document.querySelector('#mobile-menu-toggle')
-const menu = document.querySelector('#mobile-menu')
+const mobileMenuToggle = document.querySelector('#mobile-menu-toggle')
+const mobileMenu = document.querySelector('#mobile-menu')
+const mobileMenuLinks = document.querySelectorAll('#mobile-menu a')
 
-toggle?.addEventListener('click', () => {
-  menu.classList.toggle('hidden')
-})
+if (mobileMenuToggle && mobileMenu) {
+  mobileMenuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden')
+  })
+
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden')
+    })
+  })
+}
+
+const pageRoot = document.querySelector('#page-root')
+
+if (pageRoot) {
+  requestAnimationFrame(() => {
+    pageRoot.classList.add('page-enter-active')
+  })
+}
