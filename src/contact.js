@@ -9,39 +9,40 @@ document.querySelector('#app').innerHTML = `
       <div class="absolute left-[35%] bottom-[120px] h-[280px] w-[280px] rounded-full bg-white/5 blur-[120px]"></div>
     </div>
 
+    <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/70 backdrop-blur-xl border-b border-white/5">
-  <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
-    <a href="/" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
-      <span class="text-[#3082BE]">AG.</span>
-    </a>
+      <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
+        <a href="/index.html" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
+          <span class="text-[#3082BE]">AG.</span>
+        </a>
 
-    <div class="hidden md:flex items-center gap-8 text-[13px]">
-      <a href="/work" class="text-slate-400 hover:text-white transition-colors duration-200">Work</a>
-<a href="/about" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
-<a href="/contact" class="relative text-white transition-colors duration-200">
-  Contact
-  <span class="absolute left-0 -bottom-[18px] h-px w-full bg-[#3082BE]"></span>
-</a>
-    </div>
+        <div class="hidden md:flex items-center gap-8 text-[13px]">
+          <a href="/work.html" class="text-slate-400 hover:text-white transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
+          <a href="/contact.html" class="relative text-white transition-colors duration-200">
+            Contact
+            <span class="absolute left-0 -bottom-[18px] h-px w-full bg-[#3082BE]"></span>
+          </a>
+        </div>
 
-    <button
-      id="mobile-menu-toggle"
-      type="button"
-      aria-label="Open menu"
-      class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white hover:bg-white/5 transition"
-    >
-      <span class="text-lg leading-none">☰</span>
-    </button>
-  </div>
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white hover:bg-white/5 transition"
+        >
+          <span class="text-lg leading-none">☰</span>
+        </button>
+      </div>
 
-  <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
-    <div class="flex flex-col gap-4 text-sm">
-      <a href="/work" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
-      <a href="/about" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
-      <a href="/contact" class="text-white transition-colors duration-200">Contact</a>
-    </div>
-  </div>
-</nav>
+      <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
+        <div class="flex flex-col gap-4 text-sm">
+          <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-white transition-colors duration-200">Contact</a>
+        </div>
+      </div>
+    </nav>
 
     <main class="px-6 pt-32 pb-24">
       <div class="max-w-6xl mx-auto">
@@ -99,6 +100,7 @@ document.querySelector('#app').innerHTML = `
     </main>
   </div>
 `
+
 const mobileMenuToggle = document.querySelector('#mobile-menu-toggle')
 const mobileMenu = document.querySelector('#mobile-menu')
 const mobileMenuLinks = document.querySelectorAll('#mobile-menu a')
@@ -114,6 +116,7 @@ if (mobileMenuToggle && mobileMenu) {
     })
   })
 }
+
 const pageRoot = document.querySelector('#page-root')
 
 if (pageRoot) {
