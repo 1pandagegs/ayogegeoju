@@ -4,7 +4,7 @@ import logoImg from './assets/logo.png'
 import project1 from './assets/home-abroad.png'
 import project2 from './assets/hemo-trackr.png'
 import project3 from './assets/coverage-trackr.png'
-import project4 from './assets/coverage-trackr-thumb.png'
+import project4 from './assets/more-projects (2).png'
 
 document.querySelector('#app').innerHTML = `
   <div id="page-root" class="page-enter bg-[#020617] text-white selection:bg-[#3082BE] selection:text-black relative overflow-x-hidden">
