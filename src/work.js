@@ -1,94 +1,230 @@
 import './style.css'
+import logoImg from './assets/logo.png'
+
+import homeAbroadImg from './assets/home-abroad.png'
+import hemoTrackrImg from './assets/hemo-trackr.png'
+import coverageTrackrImg from './assets/coverage-trackr.png'
+import fallbackImg from './assets/more-projects (2).png'
 
 const projects = [
   {
-    number: '01',
-    title: 'Home and Abroad',
-    type: 'PropTech / Real Estate',
-    desc: 'A diaspora-focused property platform designed to make remote property discovery feel more trustworthy, structured, and easier to navigate.',
-    href: '/work-home-and-abroad.html',
-    category: 'design'
-  },
-  {
-    number: '02',
-    title: 'Hemo Trackr',
-    type: 'HealthTech / System Design',
-    desc: 'A blood inventory and donor management experience built to improve visibility, speed up coordination, and support faster response in urgent situations.',
-    href: '/work-hemo-trackr.html',
-    category: 'design'
-  },
-  {
-    number: '03',
     title: 'Coverage Trackr',
-    type: 'Operations / Planning Tool',
-    desc: 'A planning and monitoring tool created to support smarter operational decisions, better resource allocation, and clearer coverage visibility.',
+    category: 'enterprise',
+    featured: true,
+    label: 'Public Health / Micro-Planning',
+    desc: 'A micro-planning platform designed to support intervention planning, data collection, and coverage visibility across different country contexts.',
     href: '/work-coverage-trackr.html',
-    category: 'design'
+    image: coverageTrackrImg,
+    external: false
   },
   {
-    number: '04',
-    title: 'AI Workflow Experiments',
-    type: 'AI / Automation',
-    desc: 'Explorations focused on using AI-assisted workflows to improve ideation, research direction, content generation, and faster design support.',
-    href: '#',
-    category: 'ai'
+    title: 'Home and Abroad',
+    category: 'product',
+    featured: true,
+    label: 'PropTech / Government Platform',
+    desc: 'A NIDCOM-backed real estate listing platform helping Nigerians in Diaspora explore property opportunities with more trust and clarity.',
+    href: '/work-home-and-abroad.html',
+    image: homeAbroadImg,
+    external: false
   },
   {
-    number: '05',
-    title: 'AI Product Concepts',
-    type: 'AI / Product Thinking',
-    desc: 'Concept-driven work exploring how AI can be shaped into clearer, more useful digital experiences rather than noisy feature additions.',
-    href: '#',
-    category: 'ai'
+    title: 'SwiftEntry',
+    category: 'enterprise',
+    featured: true,
+    label: 'Visitor Management System',
+    desc: 'A visitor management product designed to improve check-in, tracking, access control, and operational visibility.',
+    href: 'https://theswiftentry.com/',
+    image: fallbackImg,
+    external: true
   },
   {
-    number: '06',
-    title: 'Brand & Campaign Direction',
-    type: 'Marketing / Creative Strategy',
-    desc: 'Creative and marketing-focused work centered on messaging clarity, campaign structure, and stronger visual storytelling across digital touchpoints.',
-    href: '#',
-    category: 'marketing'
+    title: 'SYDAAR LMS',
+    category: 'enterprise',
+    featured: true,
+    label: 'Learning Management System',
+    desc: 'A gamified LMS for internal organizational training across large institutions and teams.',
+    href: 'https://sydaar.com/',
+    image: fallbackImg,
+    external: true
   },
   {
-    number: '07',
-    title: 'Content System Thinking',
-    type: 'Marketing / Content Experience',
-    desc: 'Work exploring how brands can communicate more clearly through structured content, stronger visual rhythm, and more intentional audience flow.',
+    title: 'PRMT',
+    category: 'enterprise',
+    featured: false,
+    label: 'Partner Resource Management Tracker',
+    desc: 'A partner resource tracking platform designed to help teams monitor resources, partners, allocation, and operational movement.',
+    href: 'https://resourcetrackr.com/',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'Hemo Trackr',
+    category: 'enterprise',
+    featured: false,
+    label: 'HealthTech / System Design',
+    desc: 'A blood inventory and donor management system built to improve visibility, coordination, and faster response across healthcare workflows.',
+    href: '/work-hemo-trackr.html',
+    image: hemoTrackrImg,
+    external: false
+  },
+  {
+    title: 'Manorr',
+    category: 'enterprise',
+    featured: false,
+    label: 'Real Estate / Estate Operations',
+    desc: 'A unified platform for managing estate occupants, visitors, and operational movement within real estate communities.',
+    href: 'https://www.themanorr.com/',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'Mundayne',
+    category: 'product',
+    featured: false,
+    label: 'Habit Tracker / Task Management App',
+    desc: 'A mobile app designed and built to help users manage habits, tasks, routines, and personal daily progress.',
+    href: 'https://mundayne.vercel.app',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'Nuelliz Launch Tracker',
+    category: 'product',
+    featured: false,
+    label: 'Dashboard / Web App',
+    desc: 'A React and Vite dashboard designed and developed to help track launch tasks, progress, and execution planning.',
+    href: 'https://nuelliz-launch-tracker.vercel.app/',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'Goju Design Website',
+    category: 'website',
+    featured: false,
+    label: 'Studio Website',
+    desc: 'A digital studio website for presenting design services, creative direction, and brand positioning.',
+    href: 'https://gojudesign.com',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'Sabali Limited',
+    category: 'website',
+    featured: false,
+    label: 'Agro / Corporate Website',
+    desc: 'An agro-focused business website designed and built with HTML, CSS, and JavaScript.',
+    href: 'https://sabalilimited.com',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'A Message For Her',
+    category: 'website',
+    featured: false,
+    label: 'Podcast Website',
+    desc: 'A podcast website designed and developed to present episodes, media, and brand storytelling.',
+    href: 'https://a-message-for-her.vercel.app/index.html',
+    image: fallbackImg,
+    external: true
+  },
+  {
+    title: 'Brand Identity & Marketing Design',
+    category: 'brand',
+    featured: false,
+    label: 'Identity / Campaign / Social',
+    desc: 'Visual identity, social media graphics, campaign direction, and marketing design work for brands, hospitality businesses, and digital products.',
     href: '#',
-    category: 'marketing'
+    image: fallbackImg,
+    external: false
   }
 ]
 
+const tabs = [
+  { label: 'Featured', value: 'featured' },
+  { label: 'Enterprise Systems', value: 'enterprise' },
+  { label: 'Product Design', value: 'product' },
+  { label: 'Websites', value: 'website' },
+  { label: 'Brand & Marketing', value: 'brand' }
+]
+
+function getProjects(tab = 'featured') {
+  if (tab === 'featured') {
+    return projects.filter(project => project.featured)
+  }
+
+  return projects.filter(project => project.category === tab)
+}
+
+function projectCard(project, index) {
+  return `
+    <article class="group rounded-[34px] border border-white/8 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition duration-300 hover:-translate-y-1">
+      <div class="h-[300px] md:h-[420px] overflow-hidden bg-slate-900">
+        <img
+          src="${project.image}"
+          alt="${project.title}"
+          class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+        />
+      </div>
+
+      <div class="p-6 md:p-8">
+        <div class="flex items-center justify-between gap-5 mb-5">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-[#3082BE]">
+            ${String(index + 1).padStart(2, '0')}
+          </p>
+
+          <p class="text-[11px] uppercase tracking-[0.22em] text-slate-500 text-right">
+            ${project.label}
+          </p>
+        </div>
+
+        <h3 class="text-3xl md:text-4xl font-bold tracking-[-0.04em] mb-4">
+          ${project.title}
+        </h3>
+
+        <p class="text-slate-400 leading-relaxed mb-7">
+          ${project.desc}
+        </p>
+
+        <a
+          href="${project.href}"
+          ${project.external ? 'target="_blank" rel="noopener noreferrer"' : ''}
+          class="group/link inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-white transition"
+        >
+          ${project.external ? 'View live project' : project.href === '#' ? 'Coming soon' : 'View case study'}
+          <span class="transition-transform group-hover/link:translate-x-1">↗</span>
+        </a>
+      </div>
+    </article>
+  `
+}
+
 document.querySelector('#app').innerHTML = `
-  <div id="page-root" class="page-enter bg-[#020617] text-white selection:bg-[#3082BE] selection:text-black relative overflow-x-hidden">
+  <div id="page-root" class="page-enter bg-[#020617] text-white selection:bg-[#3082BE] selection:text-black relative overflow-hidden">
 
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div class="absolute left-[-10%] top-[120px] h-[320px] w-[320px] rounded-full bg-[#3082BE]/10 blur-[120px]"></div>
-      <div class="absolute right-[-10%] top-[520px] h-[360px] w-[360px] rounded-full bg-cyan-400/10 blur-[140px]"></div>
-      <div class="absolute left-[35%] bottom-[120px] h-[280px] w-[280px] rounded-full bg-white/5 blur-[120px]"></div>
+      <div class="absolute left-[-12%] top-[80px] h-[420px] w-[420px] rounded-full bg-[#3082BE]/20 blur-[150px]"></div>
+      <div class="absolute right-[-12%] top-[480px] h-[420px] w-[420px] rounded-full bg-cyan-400/10 blur-[160px]"></div>
+      <div class="absolute left-[30%] bottom-[120px] h-[360px] w-[360px] rounded-full bg-white/5 blur-[140px]"></div>
     </div>
 
-    <nav class="fixed top-0 w-full z-50 bg-[#020617]/70 backdrop-blur-xl border-b border-white/5">
-      <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
-        <a href="/index.html" class="inline-flex items-center gap-2 text-[15px] font-semibold tracking-[-0.02em] text-white">
-          <span class="text-[#3082BE]">AG.</span>
+    <nav class="fixed top-0 w-full z-50 bg-[#020617]/60 backdrop-blur-xl border-b border-white/5">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-8 h-[76px] flex items-center justify-between">
+        <a href="/index.html" class="inline-flex items-center">
+          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
         </a>
 
         <div class="hidden md:flex items-center gap-8 text-[13px]">
-          <a href="/work.html" class="relative text-white transition-colors duration-200">
-            Work
-            <span class="absolute left-0 -bottom-[18px] h-px w-full bg-[#3082BE]"></span>
-          </a>
-          <a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
-          <a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
+          <a href="/work.html" class="text-white transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
         </div>
 
-        <button
-          id="mobile-menu-toggle"
-          type="button"
-          aria-label="Open menu"
-          class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white hover:bg-white/5 transition"
-        >
+        <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full bg-white text-[#020617] px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
+          Get in touch
+          <span>→</span>
+        </a>
+
+        <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white hover:bg-white/5 transition">
           ☰
         </button>
       </div>
@@ -102,191 +238,185 @@ document.querySelector('#app').innerHTML = `
       </div>
     </nav>
 
-    <main class="px-6 pt-32 pb-24">
-      <div class="max-w-6xl mx-auto">
+    <main class="px-6 md:px-8 pt-24 pb-10">
 
-        <section class="mb-20 fade-up">
-          <a href="/index.html" class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white mb-8 transition-colors duration-200">
-            <span class="transition-transform duration-200 group-hover:-translate-x-1">←</span>
-            Back home
-          </a>
+      <section class="w-full max-w-[1600px] mx-auto fade-up">
+        <div class="rounded-[36px] md:rounded-[52px] overflow-hidden border border-white/10 bg-white/[0.03] shadow-2xl">
+          <div class="relative min-h-[620px] p-6 md:p-10 lg:p-14 flex flex-col justify-between">
 
-          <div class="grid lg:grid-cols-[1.15fr_380px] gap-10 items-end">
-            <div>
-              <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-4">
-                Work
-              </p>
-
-              <h1 class="text-4xl md:text-6xl lg:text-[78px] font-bold leading-[0.98] tracking-[-0.04em] mb-6">
-                Selected projects, experiments, and creative direction.
-              </h1>
-
-              <p class="text-lg md:text-[21px] text-slate-400 max-w-3xl leading-[1.8]">
-                A broader look at product design, AI-driven exploration, and marketing work focused on clarity, trust, structure, and stronger digital communication.
-              </p>
+            <div class="absolute inset-0">
+              <img src="${coverageTrackrImg}" alt="Work page hero preview" class="h-full w-full object-cover opacity-30 scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/90 to-[#020617]/45"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-[#020617]/20"></div>
             </div>
 
-            <div class="rounded-[28px] border border-white/8 bg-white/[0.02] p-6">
-              <p class="text-[11px] uppercase tracking-[0.22em] text-slate-500 mb-3">
-                Categories
-              </p>
-              <div class="space-y-3 text-sm text-slate-300">
-                <div class="flex items-center justify-between border-b border-white/5 pb-3">
-                  <span>Design</span>
-                  <span class="text-slate-500">03</span>
-                </div>
-                <div class="flex items-center justify-between border-b border-white/5 pb-3">
-                  <span>AI</span>
-                  <span class="text-slate-500">02</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span>Marketing</span>
-                  <span class="text-slate-500">02</span>
-                </div>
+            <div class="relative z-10 flex items-start justify-between gap-8">
+              <div>
+                <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-3">
+                  Work
+                </p>
+                <p class="text-sm text-slate-300">
+                  Enterprise systems / Products / Websites / Brand experiences
+                </p>
+              </div>
+
+              <div class="hidden lg:block max-w-[360px]">
+                <p class="text-2xl font-semibold leading-tight tracking-[-0.03em]">
+                  A portfolio of systems and experiences built around clarity, trust, and usability.
+                </p>
               </div>
             </div>
+
+            <div class="relative z-10 max-w-6xl">
+              <p class="text-sm uppercase tracking-[0.25em] text-white/50 mb-5">
+                Selected work across real-world products
+              </p>
+
+              <h1 class="text-5xl md:text-7xl lg:text-[104px] font-extrabold leading-[0.9] tracking-[-0.06em] max-w-6xl">
+                Systems, products, websites, and brand experiences.
+              </h1>
+
+              <p class="mt-8 text-lg md:text-[21px] text-slate-300 max-w-4xl leading-[1.8]">
+                A broader look at product design, public-sector tools, SaaS products, operational platforms, websites, brand identity, and marketing design.
+              </p>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+              ${[
+                ['01', 'Enterprise Systems'],
+                ['02', 'Product Design'],
+                ['03', 'Web Experiences'],
+                ['04', 'Brand & Marketing']
+              ].map(item => `
+                <div class="rounded-[22px] border border-white/10 bg-black/20 backdrop-blur-xl p-4">
+                  <p class="text-[11px] uppercase tracking-[0.22em] text-[#3082BE] mb-2">#${item[0]}</p>
+                  <p class="text-sm text-slate-200">${item[1]}</p>
+                </div>
+              `).join('')}
+            </div>
+
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="border-t border-white/5 pt-12">
-          <div class="flex flex-wrap items-center gap-3 mb-12">
-            <button data-tab="all" class="work-tab active-tab px-5 py-3 rounded-full border border-white/10 text-sm font-medium transition">
-              All
-            </button>
-            <button data-tab="design" class="work-tab px-5 py-3 rounded-full border border-white/10 text-sm font-medium transition">
-              Design
-            </button>
-            <button data-tab="ai" class="work-tab px-5 py-3 rounded-full border border-white/10 text-sm font-medium transition">
-              AI
-            </button>
-            <button data-tab="marketing" class="work-tab px-5 py-3 rounded-full border border-white/10 text-sm font-medium transition">
-              Marketing
-            </button>
+      <section class="max-w-[1600px] mx-auto mt-8">
+        <div class="rounded-[36px] bg-[#05070c] border border-white/5 px-6 md:px-10 py-8">
+          <div class="grid gap-6 md:grid-cols-[220px_1fr] items-center">
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Live products and platforms
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-sm text-slate-300">
+              ${['Coverage Trackr', 'Home & Abroad', 'SwiftEntry', 'SYDAAR LMS', 'Manorr', 'PRMT'].map(item => `
+                <div class="rounded-full border border-white/8 bg-white/[0.02] px-4 py-3 text-center">
+                  ${item}
+                </div>
+              `).join('')}
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div id="work-grid" class="space-y-0"></div>
-        </section>
+      <section class="max-w-[1600px] mx-auto mt-16">
+        <div class="flex flex-wrap gap-3 mb-10">
+          ${tabs.map((tab, index) => `
+            <button
+              data-tab="${tab.value}"
+              class="work-tab ${index === 0 ? 'bg-[#3082BE] text-white border-[#3082BE]' : 'bg-white/[0.03] text-slate-300 border-white/10'} h-[52px] px-6 rounded-full border text-sm font-semibold transition hover:border-white/30"
+            >
+              ${tab.label}
+            </button>
+          `).join('')}
+        </div>
 
-      </div>
+        <div id="project-grid" class="grid lg:grid-cols-2 xl:grid-cols-3 gap-5"></div>
+      </section>
+
+      <section class="max-w-[1600px] mx-auto mt-28 mb-6">
+        <div class="rounded-[40px] border border-white/8 bg-[#3082BE]/10 p-8 md:p-12">
+          <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
+            <div>
+              <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-5">
+                Contact
+              </p>
+
+              <h2 class="text-4xl md:text-6xl font-extrabold leading-[0.95] tracking-[-0.05em] max-w-3xl">
+                Need a product or website to feel clearer and easier to trust?
+              </h2>
+            </div>
+
+            <div class="flex flex-wrap gap-4 lg:justify-end">
+              <a href="mailto:aogegeoju0@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-white text-[#020617] px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
+                Email me
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+              </a>
+
+              <a href="/about.html" class="group inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold hover:border-white/30 transition">
+                About me
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <footer class="px-6 md:px-8 py-10 border-t border-white/10 bg-[#020617]">
+      <div class="max-w-[1600px] mx-auto rounded-[28px] border border-white/8 bg-white/[0.03] px-6 md:px-8 py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm text-slate-500">© 2026 Ayo Gegeoju</p>
+
+        <div class="flex items-center gap-6 text-sm">
+          <a href="/work.html" class="text-white">Work</a>
+          <a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
+        </div>
+      </div>
+    </footer>
+
   </div>
 `
 
-const workGrid = document.querySelector('#work-grid')
+const projectGrid = document.querySelector('#project-grid')
+const tabButtons = document.querySelectorAll('.work-tab')
 
-function renderProjects(category = 'all') {
-  const filtered = category === 'all'
-    ? projects
-    : projects.filter(project => project.category === category)
+function renderProjects(tab = 'featured') {
+  const filteredProjects = getProjects(tab)
 
-  workGrid.innerHTML = filtered.map(project => `
-    <article class="group border-t border-white/10 py-10 md:py-12 transition-all duration-300 hover:bg-white/[0.02] hover:rounded-[24px] hover:px-4">
-      <div class="grid md:grid-cols-[72px_minmax(0,1fr)_190px] gap-6 md:gap-8 items-start">
-
-        <div class="pt-1 text-[11px] text-slate-500 tracking-[0.22em] uppercase">
-          ${project.number}
-        </div>
-
-        <div class="max-w-2xl transition-transform duration-300 group-hover:translate-x-1">
-          <div class="mb-5 w-full rounded-[24px] border border-white/5 bg-slate-900 p-3">
-            <div class="rounded-[18px] border border-white/5 bg-[#0b1220] overflow-hidden">
-              <div class="flex items-center gap-2 px-4 py-3 border-b border-white/5">
-                <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
-                <span class="h-2.5 w-2.5 rounded-full bg-white/10"></span>
-                <span class="h-2.5 w-2.5 rounded-full bg-white/10"></span>
-                <div class="ml-3 h-2 w-24 rounded-full bg-white/10"></div>
-              </div>
-
-              <div class="p-4 md:p-5">
-                <div class="grid grid-cols-12 gap-3 min-h-[170px] md:min-h-[190px]">
-                  <div class="col-span-4 rounded-[14px] bg-white/[0.03] border border-white/5 p-3">
-                    <div class="h-3 w-16 rounded-full bg-[#3082BE]/70 mb-4"></div>
-                    <div class="space-y-2">
-                      <div class="h-2 w-full rounded-full bg-white/10"></div>
-                      <div class="h-2 w-5/6 rounded-full bg-white/10"></div>
-                      <div class="h-2 w-4/6 rounded-full bg-white/10"></div>
-                    </div>
-                  </div>
-
-                  <div class="col-span-8 rounded-[14px] bg-white/[0.03] border border-white/5 p-3 flex flex-col">
-                    <div class="flex items-center justify-between mb-4">
-                      <div class="h-3 w-24 rounded-full bg-white/15"></div>
-                      <div class="h-8 w-8 rounded-full bg-[#3082BE]/20 border border-[#3082BE]/20"></div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-3 flex-1">
-                      <div class="rounded-[12px] bg-white/[0.04] border border-white/5"></div>
-                      <div class="rounded-[12px] bg-white/[0.04] border border-white/5"></div>
-                      <div class="col-span-2 rounded-[12px] bg-white/[0.04] border border-white/5"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mt-4 flex items-center justify-between">
-                  <div class="text-[11px] uppercase tracking-[0.2em] text-slate-500">
-                    ${project.category}
-                  </div>
-                  <div class="h-2 w-20 rounded-full bg-white/10"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-3">
-            <h2 class="text-2xl md:text-[34px] leading-tight font-semibold tracking-[-0.03em] text-white transition group-hover:text-[#3082BE]">
-              ${project.title}
-            </h2>
-
-            <span class="text-[11px] uppercase tracking-[0.22em] text-slate-500 md:hidden">
-              ${project.type}
-            </span>
-          </div>
-
-          <p class="text-slate-400 text-[17px] leading-[1.8]">
-            ${project.desc}
-          </p>
-        </div>
-
-        <div class="flex flex-col items-start md:items-end gap-4 pt-1">
-          <p class="hidden md:block text-[11px] text-slate-500 uppercase tracking-[0.22em] leading-5 text-right max-w-[190px]">
-            ${project.type}
-          </p>
-
-          <a href="${project.href}" class="group inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors duration-200">
-            View project
-            <span class="transition-transform duration-200 group-hover:translate-x-1">↗</span>
-          </a>
-        </div>
-
-      </div>
-    </article>
-  `).join('')
+  projectGrid.innerHTML = filteredProjects.map((project, index) => projectCard(project, index)).join('')
 }
 
-renderProjects()
+renderProjects('featured')
 
-const tabs = document.querySelectorAll('.work-tab')
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(button => {
-      button.classList.remove('active-tab', 'text-white', 'border-white/30', 'bg-white/[0.04]')
-      button.classList.add('text-slate-300')
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    tabButtons.forEach(tab => {
+      tab.classList.remove('bg-[#3082BE]', 'text-white', 'border-[#3082BE]')
+      tab.classList.add('bg-white/[0.03]', 'text-slate-300', 'border-white/10')
     })
 
-    tab.classList.add('active-tab', 'text-white', 'border-white/30', 'bg-white/[0.04]')
-    tab.classList.remove('text-slate-300')
+    button.classList.add('bg-[#3082BE]', 'text-white', 'border-[#3082BE]')
+    button.classList.remove('bg-white/[0.03]', 'text-slate-300', 'border-white/10')
 
-    renderProjects(tab.dataset.tab)
+    renderProjects(button.dataset.tab)
   })
 })
 
 const mobileMenuToggle = document.querySelector('#mobile-menu-toggle')
 const mobileMenu = document.querySelector('#mobile-menu')
+const mobileMenuLinks = document.querySelectorAll('#mobile-menu a')
 
-mobileMenuToggle?.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden')
-})
+if (mobileMenuToggle && mobileMenu) {
+  mobileMenuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden')
+  })
+
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden')
+    })
+  })
+}
 
 const pageRoot = document.querySelector('#page-root')
 
