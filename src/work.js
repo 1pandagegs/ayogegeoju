@@ -33,9 +33,9 @@ const projects = [
     featured: true,
     label: 'Visitor Management System',
     desc: 'A visitor management product designed to improve check-in, tracking, access control, and operational visibility.',
-    href: 'https://theswiftentry.com/',
+    href: '/work-swiftentry.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'SYDAAR LMS',
@@ -43,9 +43,9 @@ const projects = [
     featured: true,
     label: 'Learning Management System',
     desc: 'A gamified LMS for internal organizational training across large institutions and teams.',
-    href: 'https://sydaar.com/',
+    href: '/work-sydaar-lms.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'PRMT',
@@ -53,9 +53,9 @@ const projects = [
     featured: false,
     label: 'Partner Resource Management Tracker',
     desc: 'A partner resource tracking platform designed to help teams monitor resources, partners, allocation, and operational movement.',
-    href: 'https://resourcetrackr.com/',
+    href: '/work-prmt.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'Hemo Trackr',
@@ -73,9 +73,9 @@ const projects = [
     featured: false,
     label: 'Real Estate / Estate Operations',
     desc: 'A unified platform for managing estate occupants, visitors, and operational movement within real estate communities.',
-    href: 'https://www.themanorr.com/',
+    href: '/work-manorr.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'Mundayne',
@@ -83,9 +83,9 @@ const projects = [
     featured: false,
     label: 'Habit Tracker / Task Management App',
     desc: 'A mobile app designed and built to help users manage habits, tasks, routines, and personal daily progress.',
-    href: 'https://mundayne.vercel.app',
+    href: '/work-mundayne.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'Nuelliz Launch Tracker',
@@ -93,9 +93,9 @@ const projects = [
     featured: false,
     label: 'Dashboard / Web App',
     desc: 'A React and Vite dashboard designed and developed to help track launch tasks, progress, and execution planning.',
-    href: 'https://nuelliz-launch-tracker.vercel.app/',
+    href: '/work-nuelliz.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'Goju Design Website',
@@ -103,9 +103,9 @@ const projects = [
     featured: false,
     label: 'Studio Website',
     desc: 'A digital studio website for presenting design services, creative direction, and brand positioning.',
-    href: 'https://gojudesign.com',
+    href: '/work-goju-design.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'Sabali Limited',
@@ -113,9 +113,9 @@ const projects = [
     featured: false,
     label: 'Agro / Corporate Website',
     desc: 'An agro-focused business website designed and built with HTML, CSS, and JavaScript.',
-    href: 'https://sabalilimited.com',
+    href: '/work-sabali.html',
     image: fallbackImg,
-    external: true
+    external: false
   },
   {
     title: 'A Message For Her',
@@ -123,17 +123,7 @@ const projects = [
     featured: false,
     label: 'Podcast Website',
     desc: 'A podcast website designed and developed to present episodes, media, and brand storytelling.',
-    href: 'https://a-message-for-her.vercel.app/index.html',
-    image: fallbackImg,
-    external: true
-  },
-  {
-    title: 'Brand Identity & Marketing Design',
-    category: 'brand',
-    featured: false,
-    label: 'Identity / Campaign / Social',
-    desc: 'Visual identity, social media graphics, campaign direction, and marketing design work for brands, hospitality businesses, and digital products.',
-    href: '#',
+    href: '/work-amfh.html',
     image: fallbackImg,
     external: false
   }
@@ -145,6 +135,58 @@ const tabs = [
   { label: 'Product Design', value: 'product' },
   { label: 'Websites', value: 'website' },
   { label: 'Brand & Marketing', value: 'brand' }
+]
+
+const brandTabs = [
+  { label: 'All', value: 'all' },
+  { label: 'Logos', value: 'logos' },
+  { label: 'Brand Identity', value: 'brand-identity' },
+  { label: 'Flyers', value: 'flyers' },
+  { label: 'Social Media', value: 'social-media' },
+  { label: 'Illustrations', value: 'illustrations' }
+]
+
+const brandGallery = [
+  {
+    title: 'Logo Exploration',
+    type: 'logos',
+    image: fallbackImg
+  },
+  {
+    title: 'Brand Identity System',
+    type: 'brand-identity',
+    image: fallbackImg
+  },
+  {
+    title: 'Event Flyer Design',
+    type: 'flyers',
+    image: fallbackImg
+  },
+  {
+    title: 'Social Media Campaign',
+    type: 'social-media',
+    image: fallbackImg
+  },
+  {
+    title: 'Illustration Study',
+    type: 'illustrations',
+    image: fallbackImg
+  },
+  {
+    title: 'Hospitality Campaign Visual',
+    type: 'social-media',
+    image: fallbackImg
+  },
+  {
+    title: 'Product Launch Flyer',
+    type: 'flyers',
+    image: fallbackImg
+  },
+  {
+    title: 'Brand Mark Direction',
+    type: 'logos',
+    image: fallbackImg
+  }
 ]
 
 function getProjects(tab = 'featured') {
@@ -190,12 +232,114 @@ function projectCard(project, index) {
           ${project.external ? 'target="_blank" rel="noopener noreferrer"' : ''}
           class="group/link inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-white transition"
         >
-          ${project.external ? 'View live project' : project.href === '#' ? 'Coming soon' : 'View case study'}
+          ${project.external ? 'View live project' : project.href === '#' ? 'Coming soon' : 'View project'}
           <span class="transition-transform group-hover/link:translate-x-1">↗</span>
         </a>
       </div>
     </article>
   `
+}
+
+function renderBrandGallery(type = 'all') {
+  const filteredItems = type === 'all'
+    ? brandGallery
+    : brandGallery.filter(item => item.type === type)
+
+  projectGrid.innerHTML = `
+    <div class="xl:col-span-3">
+      <div class="rounded-[36px] border border-white/8 bg-white/[0.03] p-5 md:p-6 mb-8">
+        <div class="flex flex-wrap gap-3">
+          ${brandTabs.map((tab, index) => `
+            <button
+              data-brand-tab="${tab.value}"
+              class="brand-tab ${index === 0 ? 'bg-[#3082BE] text-white border-[#3082BE]' : 'bg-white/[0.03] text-slate-300 border-white/10'} h-[48px] px-5 rounded-full border text-sm font-semibold transition hover:border-white/30"
+            >
+              ${tab.label}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <div id="brand-gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        ${filteredItems.map(item => `
+          <article class="group rounded-[28px] border border-white/8 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition duration-300 hover:-translate-y-1">
+            <div class="h-[280px] md:h-[340px] overflow-hidden bg-slate-900">
+              <img
+                src="${item.image}"
+                alt="${item.title}"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+              />
+            </div>
+
+            <div class="p-5">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-[#3082BE] mb-3">
+                ${item.type.replaceAll('-', ' ')}
+              </p>
+
+              <h3 class="text-xl md:text-2xl font-bold tracking-[-0.03em]">
+                ${item.title}
+              </h3>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  `
+
+  const brandTabButtons = document.querySelectorAll('.brand-tab')
+
+  brandTabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const activeType = button.dataset.brandTab
+      const filtered = activeType === 'all'
+        ? brandGallery
+        : brandGallery.filter(item => item.type === activeType)
+
+      brandTabButtons.forEach(tab => {
+        tab.classList.remove('bg-[#3082BE]', 'text-white', 'border-[#3082BE]')
+        tab.classList.add('bg-white/[0.03]', 'text-slate-300', 'border-white/10')
+      })
+
+      button.classList.add('bg-[#3082BE]', 'text-white', 'border-[#3082BE]')
+      button.classList.remove('bg-white/[0.03]', 'text-slate-300', 'border-white/10')
+
+      const galleryGrid = document.querySelector('#brand-gallery-grid')
+      galleryGrid.innerHTML = filtered.map(item => `
+        <article class="group rounded-[28px] border border-white/8 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition duration-300 hover:-translate-y-1">
+          <div class="h-[280px] md:h-[340px] overflow-hidden bg-slate-900">
+            <img
+              src="${item.image}"
+              alt="${item.title}"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+            />
+          </div>
+
+          <div class="p-5">
+            <p class="text-[11px] uppercase tracking-[0.22em] text-[#3082BE] mb-3">
+              ${item.type.replaceAll('-', ' ')}
+            </p>
+
+            <h3 class="text-xl md:text-2xl font-bold tracking-[-0.03em]">
+              ${item.title}
+            </h3>
+          </div>
+        </article>
+      `).join('')
+    })
+  })
+}
+
+function renderProjects(tab = 'featured') {
+  if (tab === 'brand') {
+    renderBrandGallery()
+    return
+  }
+
+  const filteredProjects = getProjects(tab)
+
+  projectGrid.innerHTML = filteredProjects
+    .map((project, index) => projectCard(project, index))
+    .join('')
 }
 
 document.querySelector('#app').innerHTML = `
@@ -285,7 +429,7 @@ document.querySelector('#app').innerHTML = `
               ${[
                 ['01', 'Enterprise Systems'],
                 ['02', 'Product Design'],
-                ['03', 'Web Experiences'],
+                ['03', 'Websites'],
                 ['04', 'Brand & Marketing']
               ].map(item => `
                 <div class="rounded-[22px] border border-white/10 bg-black/20 backdrop-blur-xl p-4">
@@ -379,12 +523,6 @@ document.querySelector('#app').innerHTML = `
 
 const projectGrid = document.querySelector('#project-grid')
 const tabButtons = document.querySelectorAll('.work-tab')
-
-function renderProjects(tab = 'featured') {
-  const filteredProjects = getProjects(tab)
-
-  projectGrid.innerHTML = filteredProjects.map((project, index) => projectCard(project, index)).join('')
-}
 
 renderProjects('featured')
 
