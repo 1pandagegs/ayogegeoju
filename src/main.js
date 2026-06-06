@@ -300,7 +300,7 @@ document.querySelector('#app').innerHTML = `
           ${galleryProjects.map((item, index) => `
             <div class="group rounded-[30px] border border-white/8 bg-white/[0.03] overflow-hidden">
               <div class="h-[220px] bg-slate-900 overflow-hidden">
-                <img src="${index % 2 === 0 ? moreProjectsImg : hemoTrackrImg}" alt="${item}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
+                <img src="${coverageTrackrImg}" alt="${item}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
               </div>
 
               <div class="p-5">
