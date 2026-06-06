@@ -1,5 +1,5 @@
 import './style.css'
-import fallbackImg from './assets/more-projects (2).png'
+import fallbackImg from './assets/resource-trackr-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({

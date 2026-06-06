@@ -1,5 +1,5 @@
 import logoImg from './assets/logo.png'
-import fallbackImg from './assets/more-projects (2).png'
+import fallbackImg from './assets/coverage-trackr-cover.png'
 
 export function renderCaseStudy(project) {
   const image = project.image || fallbackImg

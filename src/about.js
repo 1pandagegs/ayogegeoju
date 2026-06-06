@@ -1,5 +1,5 @@
 import './style.css'
-import portraitImg from './assets/portrait-placeholder.jpg'
+import portraitImg from './assets/hero-bg.png'
 import logoImg from './assets/logo.png'
 
 const proofProjects = [

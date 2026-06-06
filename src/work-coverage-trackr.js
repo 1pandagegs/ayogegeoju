@@ -1,7 +1,7 @@
 import './style.css'
 import logoImg from './assets/logo.png'
-import coverageTrackrImg from './assets/coverage-trackr.png'
-import fallbackImg from './assets/more-projects (2).png'
+import coverageTrackrImg from './assets/coverage-trackr-cover.png'
+import fallbackImg from './assets/coverage-trackr-cover.png'
 
 const roleItems = [
   'Product Design',

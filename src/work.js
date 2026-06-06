@@ -1,10 +1,16 @@
 import './style.css'
 import logoImg from './assets/logo.png'
 
-import homeAbroadImg from './assets/home-abroad.png'
-import hemoTrackrImg from './assets/hemo-trackr.png'
-import coverageTrackrImg from './assets/coverage-trackr.png'
-import fallbackImg from './assets/more-projects (2).png'
+import coverageTrackrCover from './assets/coverage-trackr-cover.png'
+import swiftEntryCover from './assets/swiftentry-cover.png'
+import homeAndAbroadCover from './assets/home-and-abroad-cover.png'
+import resourceTrackrCover from './assets/resource-trackr-cover.png'
+import sydaarLmsCover from './assets/sydaar-lms-cover.png'
+import mundayneCover from './assets/mundayne-cover.png'
+import nuellizCover from './assets/nuelliz-launch-tracker-cover.png'
+import gojuDesignCover from './assets/goju-design-cover.png'
+import sabaliCover from './assets/sabali-limited-cover.png'
+import manorrCover from './assets/manorr-cover.png'
 
 const projects = [
   {
@@ -14,7 +20,7 @@ const projects = [
     label: 'Public Health / Micro-Planning',
     desc: 'A micro-planning platform designed to support intervention planning, data collection, and coverage visibility across different country contexts.',
     href: '/work-coverage-trackr.html',
-    image: coverageTrackrImg,
+    image: coverageTrackrCover,
     external: false
   },
   {
@@ -24,7 +30,7 @@ const projects = [
     label: 'PropTech / Government Platform',
     desc: 'A NIDCOM-backed real estate listing platform helping Nigerians in Diaspora explore property opportunities with more trust and clarity.',
     href: '/work-home-and-abroad.html',
-    image: homeAbroadImg,
+    image: homeAndAbroadCover,
     external: false
   },
   {
@@ -34,7 +40,7 @@ const projects = [
     label: 'Visitor Management System',
     desc: 'A visitor management product designed to improve check-in, tracking, access control, and operational visibility.',
     href: '/work-swiftentry.html',
-    image: fallbackImg,
+    image: swiftentryCover,
     external: false
   },
   {
@@ -44,17 +50,17 @@ const projects = [
     label: 'Learning Management System',
     desc: 'A gamified LMS for internal organizational training across large institutions and teams.',
     href: '/work-sydaar-lms.html',
-    image: fallbackImg,
+    image: sydaarLmsCover,
     external: false
   },
   {
-    title: 'PRMT',
+    title: 'Resource Trackr',
     category: 'enterprise',
     featured: false,
     label: 'Partner Resource Management Tracker',
     desc: 'A partner resource tracking platform designed to help teams monitor resources, partners, allocation, and operational movement.',
     href: '/work-prmt.html',
-    image: fallbackImg,
+    image: resourceTrackrCover,
     external: false
   },
   {
@@ -74,7 +80,7 @@ const projects = [
     label: 'Real Estate / Estate Operations',
     desc: 'A unified platform for managing estate occupants, visitors, and operational movement within real estate communities.',
     href: '/work-manorr.html',
-    image: fallbackImg,
+    image: manorrCover,
     external: false
   },
   {
@@ -84,7 +90,7 @@ const projects = [
     label: 'Habit Tracker / Task Management App',
     desc: 'A mobile app designed and built to help users manage habits, tasks, routines, and personal daily progress.',
     href: '/work-mundayne.html',
-    image: fallbackImg,
+    image: mundayneCover,
     external: false
   },
   {
@@ -94,7 +100,7 @@ const projects = [
     label: 'Dashboard / Web App',
     desc: 'A React and Vite dashboard designed and developed to help track launch tasks, progress, and execution planning.',
     href: '/work-nuelliz.html',
-    image: fallbackImg,
+    image: nuellizCover,
     external: false
   },
   {
@@ -104,7 +110,7 @@ const projects = [
     label: 'Studio Website',
     desc: 'A digital studio website for presenting design services, creative direction, and brand positioning.',
     href: '/work-goju-design.html',
-    image: fallbackImg,
+    image: gojuDesignCover,
     external: false
   },
   {
@@ -124,7 +130,7 @@ const projects = [
     label: 'Podcast Website',
     desc: 'A podcast website designed and developed to present episodes, media, and brand storytelling.',
     href: '/work-amfh.html',
-    image: fallbackImg,
+    image: sabaliCover,
     external: false
   }
 ]

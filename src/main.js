@@ -1,10 +1,10 @@
 import './style.css'
 import logoImg from './assets/logo.png'
 
-import coverageTrackrImg from './assets/coverage-trackr.png'
-import homeAbroadImg from './assets/home-abroad.png'
-import hemoTrackrImg from './assets/hemo-trackr.png'
-import moreProjectsImg from './assets/more-projects (2).png'
+import coverageTrackrImg from './assets/coverage-trackr-cover.png'
+import homeAbroadImg from './assets/home-and-abroad-cover.png'
+import hemoTrackrImg from './assets/hemotrackr-cover.png'
+import moreProjectsImg from './assets/resource-trackr-cover.png'
 
 const selectedProducts = [
   {
