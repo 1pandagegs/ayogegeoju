@@ -3,8 +3,8 @@ import logoImg from './assets/logo.png'
 
 import coverageTrackrImg from './assets/coverage-trackr-cover.png'
 import homeAbroadImg from './assets/home-and-abroad-cover.png'
-import hemoTrackrImg from './assets/hemotrackr-cover.png'
-import moreProjectsImg from './assets/resource-trackr-cover.png'
+import swiftentryImg from './assets/swiftentry-cover.png'
+import sydaarLmsImg from './assets/sydaar-lms-cover.png'
 
 const selectedProducts = [
   {
@@ -26,7 +26,7 @@ const selectedProducts = [
     label: 'Visitor Management System',
     desc: 'A visitor management product designed to improve check-in, tracking, and operational visibility for organizations and estates.',
     href: 'https://theswiftentry.com/',
-    image: moreProjectsImg,
+    image: swiftentryImg,
     external: true
   },
   {
@@ -34,7 +34,7 @@ const selectedProducts = [
     label: 'Learning Management System',
     desc: 'A gamified learning management system for internal organizational training across large institutions and teams.',
     href: 'https://sydaar.com/',
-    image: hemoTrackrImg,
+    image: sydaarLmsImg,
     external: true
   }
 ]

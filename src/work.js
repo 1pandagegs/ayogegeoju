@@ -11,6 +11,7 @@ import nuellizCover from './assets/nuelliz-launch-tracker-cover.png'
 import gojuDesignCover from './assets/goju-design-cover.png'
 import sabaliCover from './assets/sabali-limited-cover.png'
 import manorrCover from './assets/manorr-cover.png'
+import amfhCover from './assets/a-message-for-her-cover.png'
 
 const projects = [
   {
@@ -120,7 +121,7 @@ const projects = [
     label: 'Agro / Corporate Website',
     desc: 'An agro-focused business website designed and built with HTML, CSS, and JavaScript.',
     href: '/work-sabali.html',
-    image: fallbackImg,
+    image: sabaliCover,
     external: false
   },
   {
@@ -130,7 +131,7 @@ const projects = [
     label: 'Podcast Website',
     desc: 'A podcast website designed and developed to present episodes, media, and brand storytelling.',
     href: '/work-amfh.html',
-    image: sabaliCover,
+    image: amfhCover,
     external: false
   }
 ]
