@@ -41,7 +41,7 @@ const projects = [
     label: 'Visitor Management System',
     desc: 'A visitor management product designed to improve check-in, tracking, access control, and operational visibility.',
     href: '/work-swiftentry.html',
-    image: swiftentryCover,
+    image: swiftEntryCover,
     external: false
   },
   {
