@@ -3,6 +3,7 @@ import fallbackImg from './assets/a-message-for-her-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'amfh',
   title: 'A Message For Her',
   category: 'Podcast Website',
   summary: 'A podcast website designed and developed to present episodes, media, and brand storytelling.',

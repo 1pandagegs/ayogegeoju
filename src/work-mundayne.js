@@ -3,6 +3,7 @@ import fallbackImg from './assets/mundayne-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'mundayne',
   title: 'Mundayne',
   category: 'Habit Tracker / Task Management App',
   summary: 'A mobile app designed and built to help users manage habits, tasks, routines, and personal daily progress.',

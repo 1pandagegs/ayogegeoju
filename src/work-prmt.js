@@ -3,6 +3,7 @@ import fallbackImg from './assets/resource-trackr-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'resource-trackr',
   title: 'PRMT',
   category: 'Partner Resource Management Tracker',
   summary: 'A partner resource tracking platform designed to help teams monitor partners, resources, allocation, and operational movement.',

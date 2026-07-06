@@ -3,6 +3,7 @@ import fallbackImg from './assets/sydaar-lms-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'sydaar-lms',
   title: 'SYDAAR LMS',
   category: 'Learning Management System',
   summary: 'A gamified learning management system designed for internal organizational training across large institutions and teams.',

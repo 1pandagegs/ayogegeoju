@@ -1,4 +1,5 @@
 import './style.css'
+import './cursor.js'
 import logoImg from './assets/logo.png'
 import hemoTrackrImg from './assets/hemotrackr-cover.png'
 import fallbackImg from './assets/hemotrackr-cover.png'
@@ -54,10 +55,11 @@ document.querySelector('#app').innerHTML = `
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/60 backdrop-blur-xl border-b border-white/5">
       <div class="max-w-[1600px] mx-auto px-6 md:px-8 h-[76px] flex items-center justify-between">
         <a href="/index.html" class="inline-flex items-center">
-          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
+          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-8 w-auto" />
         </a>
 
         <div class="hidden md:flex items-center gap-8 text-[13px]">
+          <a href="/index.html" class="text-slate-300 hover:text-white transition-colors duration-200">Home</a>
           <a href="/work.html" class="text-white transition-colors duration-200">Work</a>
           <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
           <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
@@ -75,6 +77,7 @@ document.querySelector('#app').innerHTML = `
 
       <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
         <div class="flex flex-col gap-4 text-sm">
+          <a href="/index.html" class="text-slate-300 hover:text-white transition-colors duration-200">Home</a>
           <a href="/work.html" class="text-white transition-colors duration-200">Work</a>
           <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
           <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
@@ -249,14 +252,14 @@ document.querySelector('#app').innerHTML = `
 
         <div class="grid lg:grid-cols-2 gap-5">
           ${[
-            ['Inventory dashboard', hemoTrackrImg],
-            ['Donor management', fallbackImg],
-            ['Request flow', hemoTrackrImg],
-            ['System overview', fallbackImg]
+            ['Inventory dashboard', '/assets/projects/hemo-trackr-1.png'],
+            ['Donor management', '/assets/projects/hemo-trackr-2.png'],
+            ['Request flow', '/assets/projects/hemo-trackr-3.png'],
+            ['System overview', '/assets/projects/hemo-trackr-4.png']
           ].map(item => `
             <div class="group rounded-[34px] border border-white/8 bg-white/[0.03] overflow-hidden">
               <div class="h-[320px] md:h-[460px] overflow-hidden bg-slate-900">
-                <img src="${item[1]}" alt="${item[0]}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
+                <img src="${item[1]}" onerror="this.onerror=null; this.src='${hemoTrackrImg}';" alt="${item[0]}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
               </div>
 
               <div class="p-6">

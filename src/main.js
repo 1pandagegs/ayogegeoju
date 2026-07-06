@@ -1,10 +1,20 @@
 import './style.css'
+import './cursor.js'
 import logoImg from './assets/logo.png'
+import portraitImg from './assets/hero-bg.png'
 
 import coverageTrackrImg from './assets/coverage-trackr-cover.png'
 import homeAbroadImg from './assets/home-and-abroad-cover.png'
 import swiftentryImg from './assets/swiftentry-cover.png'
 import sydaarLmsImg from './assets/sydaar-lms-cover.png'
+import prmtImg from './assets/resource-trackr-cover.png'
+import manorrImg from './assets/manorr-cover.png'
+import mundayneImg from './assets/mundayne-cover.png'
+import nuellizImg from './assets/nuelliz-launch-tracker-cover.png'
+import gojuDesignImg from './assets/goju-design-cover.png'
+import sabaliImg from './assets/sabali-limited-cover.png'
+import amfhImg from './assets/a-message-for-her-cover.png'
+import hemoTrackrImg from './assets/hemotrackr-cover.png'
 
 const selectedProducts = [
   {
@@ -40,14 +50,54 @@ const selectedProducts = [
 ]
 
 const galleryProjects = [
-  'PRMT',
-  'Manorr',
-  'Mundayne',
-  'Nuelliz Launch Tracker',
-  'Goju Design',
-  'Sabali Limited',
-  'A Message For Her',
-  'Brand & Marketing Design'
+  {
+    title: 'Resource Trackr',
+    label: 'Enterprise / Operations',
+    image: prmtImg,
+    href: '/work-prmt.html'
+  },
+  {
+    title: 'Manorr',
+    label: 'Real Estate / Estate Operations',
+    image: manorrImg,
+    href: '/work-manorr.html'
+  },
+  {
+    title: 'Mundayne',
+    label: 'Habit Tracker / Mobile App',
+    image: mundayneImg,
+    href: '/work-mundayne.html'
+  },
+  {
+    title: 'Nuelliz Launch Tracker',
+    label: 'Dashboard / Web App',
+    image: nuellizImg,
+    href: '/work-nuelliz.html'
+  },
+  {
+    title: 'Goju Design',
+    label: 'Studio Website',
+    image: gojuDesignImg,
+    href: '/work-goju-design.html'
+  },
+  {
+    title: 'Sabali Limited',
+    label: 'Agro / Corporate Website',
+    image: sabaliImg,
+    href: '/work-sabali.html'
+  },
+  {
+    title: 'A Message For Her',
+    label: 'Podcast Website',
+    image: amfhImg,
+    href: '/work-amfh.html'
+  },
+  {
+    title: 'Hemo Trackr',
+    label: 'HealthTech / System Design',
+    image: hemoTrackrImg,
+    href: '/work-hemo-trackr.html'
+  }
 ]
 
 document.querySelector('#app').innerHTML = `
@@ -62,10 +112,11 @@ document.querySelector('#app').innerHTML = `
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/60 backdrop-blur-xl border-b border-white/5">
       <div class="max-w-[1500px] mx-auto px-5 md:px-8 h-[76px] flex items-center justify-between">
         <a href="/index.html" class="inline-flex items-center">
-          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
+          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-8 w-auto" />
         </a>
 
         <div class="hidden md:flex items-center gap-8 text-[13px]">
+          <a href="/index.html" class="text-white transition-colors duration-200">Home</a>
           <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
           <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
           <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
@@ -83,6 +134,7 @@ document.querySelector('#app').innerHTML = `
 
       <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
         <div class="flex flex-col gap-4 text-sm">
+          <a href="/index.html" class="text-white transition-colors duration-200">Home</a>
           <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
           <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
           <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
@@ -96,8 +148,9 @@ document.querySelector('#app').innerHTML = `
         <div class="w-full rounded-[36px] md:rounded-[52px] overflow-hidden border border-white/10 bg-white/[0.03] shadow-2xl">
           <div class="relative min-h-[calc(100vh-120px)] p-6 md:p-10 lg:p-14 flex flex-col justify-between">
 
-            <div class="absolute inset-0">
-              <img src="${coverageTrackrImg}" alt="Coverage Trackr preview" class="h-full w-full object-cover opacity-35 scale-105" />
+            <div class="absolute inset-0" id="hero-slideshow">
+              <img id="hero-bg-1" src="${selectedProducts[0].image}" alt="Featured Project" class="absolute inset-0 h-full w-full object-cover opacity-35 scale-105 transition-opacity duration-1000" />
+              <img id="hero-bg-2" src="" alt="Featured Project" class="absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-opacity duration-1000" />
               <div class="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/85 to-[#020617]/40"></div>
               <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-[#020617]/20"></div>
             </div>
@@ -298,21 +351,21 @@ document.querySelector('#app').innerHTML = `
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           ${galleryProjects.map((item, index) => `
-            <div class="group rounded-[30px] border border-white/8 bg-white/[0.03] overflow-hidden">
+            <a href="${item.href}" class="group rounded-[30px] border border-white/8 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition duration-300 hover:-translate-y-1 block">
               <div class="h-[220px] bg-slate-900 overflow-hidden">
-                <img src="${coverageTrackrImg}" alt="${item}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
+                <img src="${item.image}" alt="${item.title}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
               </div>
 
               <div class="p-5">
                 <p class="text-[11px] uppercase tracking-[0.22em] text-slate-500 mb-3">
-                  ${index < 3 ? 'Product' : index < 6 ? 'Web Experience' : 'Brand / Marketing'}
+                  ${item.label}
                 </p>
 
                 <h3 class="text-xl font-semibold tracking-[-0.03em]">
-                  ${item}
+                  ${item.title}
                 </h3>
               </div>
-            </div>
+            </a>
           `).join('')}
         </div>
       </section>
@@ -424,4 +477,38 @@ if (pageRoot) {
   requestAnimationFrame(() => {
     pageRoot.classList.add('page-enter-active')
   })
+}
+
+// ---- Hero Slideshow ----
+const slideshowImages = [
+  coverageTrackrImg,
+  homeAbroadImg,
+  swiftentryImg,
+  sydaarLmsImg
+]
+let currentSlideIndex = 0
+const bg1 = document.querySelector('#hero-bg-1')
+const bg2 = document.querySelector('#hero-bg-2')
+
+if (bg1 && bg2) {
+  let activeBg = bg1
+  let inactiveBg = bg2
+  
+  setInterval(() => {
+    currentSlideIndex = (currentSlideIndex + 1) % slideshowImages.length
+    const nextImgSrc = slideshowImages[currentSlideIndex]
+    
+    inactiveBg.onload = () => {
+      inactiveBg.classList.remove('opacity-0')
+      inactiveBg.classList.add('opacity-35')
+      
+      activeBg.classList.remove('opacity-35')
+      activeBg.classList.add('opacity-0')
+      
+      const temp = activeBg
+      activeBg = inactiveBg
+      inactiveBg = temp
+    }
+    inactiveBg.src = nextImgSrc
+  }, 5000)
 }

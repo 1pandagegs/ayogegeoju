@@ -3,6 +3,7 @@ import fallbackImg from './assets/nuelliz-launch-tracker-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'nuelliz',
   title: 'Nuelliz Launch Tracker',
   category: 'Dashboard / Web App',
   summary: 'A React and Vite dashboard designed and developed to help track launch tasks, progress, and execution planning.',

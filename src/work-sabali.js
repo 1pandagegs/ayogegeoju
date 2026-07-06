@@ -3,6 +3,7 @@ import fallbackImg from './assets/sabali-limited-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'sabali',
   title: 'Sabali Limited',
   category: 'Agro / Corporate Website',
   summary: 'An agro-focused business website designed and built with HTML, CSS, and JavaScript.',

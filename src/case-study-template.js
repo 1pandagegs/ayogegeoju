@@ -1,3 +1,4 @@
+import './cursor.js'
 import logoImg from './assets/logo.png'
 import fallbackImg from './assets/coverage-trackr-cover.png'
 
@@ -14,11 +15,12 @@ export function renderCaseStudy(project) {
 
       <nav class="fixed top-0 w-full z-50 bg-[#020617]/60 backdrop-blur-xl border-b border-white/5">
         <div class="max-w-[1600px] mx-auto px-6 md:px-8 h-[76px] flex items-center justify-between">
-          <a href="/index.html">
-            <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
+          <a href="/index.html" class="inline-flex items-center">
+            <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-8 w-auto" />
           </a>
 
           <div class="hidden md:flex items-center gap-8 text-[13px]">
+            <a href="/index.html" class="text-slate-300 hover:text-white transition-colors duration-200">Home</a>
             <a href="/work.html" class="text-white">Work</a>
             <a href="/about.html" class="text-slate-300 hover:text-white">About</a>
             <a href="/contact.html" class="text-slate-300 hover:text-white">Contact</a>
@@ -117,16 +119,19 @@ export function renderCaseStudy(project) {
 
         <section class="max-w-[1600px] mx-auto mt-28">
           <div class="grid lg:grid-cols-2 gap-5">
-            ${project.screens.map(screen => `
-              <div class="group rounded-[34px] border border-white/8 bg-white/[0.03] overflow-hidden">
-                <div class="h-[320px] md:h-[460px] overflow-hidden bg-slate-900">
-                  <img src="${screen.image || image}" alt="${screen.title}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
+            ${project.screens.map((screen, i) => {
+              const screenUrl = screen.image || `/assets/projects/${project.slug || 'coverage-trackr'}-${i + 1}.png`
+              return `
+                <div class="group rounded-[34px] border border-white/8 bg-white/[0.03] overflow-hidden">
+                  <div class="h-[320px] md:h-[460px] overflow-hidden bg-slate-900">
+                    <img src="${screenUrl}" onerror="this.onerror=null; this.src='${image}';" alt="${screen.title}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm text-slate-400">${screen.title}</p>
+                  </div>
                 </div>
-                <div class="p-6">
-                  <p class="text-sm text-slate-400">${screen.title}</p>
-                </div>
-              </div>
-            `).join('')}
+              `
+            }).join('')}
           </div>
         </section>
 

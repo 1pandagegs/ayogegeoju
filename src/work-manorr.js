@@ -3,6 +3,7 @@ import fallbackImg from './assets/manorr-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'manorr',
   title: 'Manorr',
   category: 'Real Estate / Estate Operations',
   summary: 'A real estate operations platform for managing estate occupants, visitors, and community-level movement from a unified system.',

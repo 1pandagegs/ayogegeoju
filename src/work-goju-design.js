@@ -3,6 +3,7 @@ import fallbackImg from './assets/goju-design-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'goju-design',
   title: 'Goju Design Website',
   category: 'Studio Website',
   summary: 'A digital studio website for presenting design services, creative direction, and brand positioning.',

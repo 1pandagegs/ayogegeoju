@@ -3,6 +3,7 @@ import fallbackImg from './assets/swiftentry-cover.png'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
+  slug: 'swiftentry',
   title: 'SwiftEntry',
   category: 'Visitor Management System',
   summary: 'A visitor management system designed to improve check-in flows, visitor tracking, access control, and operational visibility.',

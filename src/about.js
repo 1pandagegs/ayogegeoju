@@ -1,4 +1,5 @@
 import './style.css'
+import './cursor.js'
 import portraitImg from './assets/hero-bg.png'
 import logoImg from './assets/logo.png'
 
@@ -70,10 +71,11 @@ document.querySelector('#app').innerHTML = `
     <nav class="fixed top-0 w-full z-50 bg-[#020617]/60 backdrop-blur-xl border-b border-white/5">
       <div class="max-w-[1600px] mx-auto px-6 md:px-8 h-[76px] flex items-center justify-between">
         <a href="/index.html" class="inline-flex items-center">
-          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-6 w-auto" />
+          <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-8 w-auto" />
         </a>
 
         <div class="hidden md:flex items-center gap-8 text-[13px]">
+          <a href="/index.html" class="text-slate-300 hover:text-white transition-colors duration-200">Home</a>
           <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
           <a href="/about.html" class="text-white transition-colors duration-200">About</a>
           <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
@@ -91,6 +93,7 @@ document.querySelector('#app').innerHTML = `
 
       <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
         <div class="flex flex-col gap-4 text-sm">
+          <a href="/index.html" class="text-slate-300 hover:text-white transition-colors duration-200">Home</a>
           <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
           <a href="/about.html" class="text-white transition-colors duration-200">About</a>
           <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
