@@ -1,6 +1,6 @@
 import './style.css'
 import './cursor.js'
-import portraitImg from './assets/hero-bg.webp'
+import portraitImg from './assets/portrait.webp'
 import logoImg from './assets/logo.png'
 import { arrow } from './icons.js'
 

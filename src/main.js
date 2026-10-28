@@ -1,7 +1,7 @@
 import './style.css'
 import './cursor.js'
 import logoImg from './assets/logo.png'
-import portraitImg from './assets/hero-bg.webp'
+import portraitImg from './assets/portrait.webp'
 
 
 import { projects } from './projects-data.js'
