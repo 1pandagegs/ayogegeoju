@@ -6,12 +6,10 @@ import portraitImg from './assets/portrait.webp'
 
 import { projects } from './projects-data.js'
 import { arrow } from './icons.js'
+import { cvButton } from './cv.js'
 
 const selectedProducts = projects.filter(project => project.featured)
 const galleryProjects = projects.filter(project => !project.featured).slice(0, 8)
-
-// Set to the CV's path (e.g. '/Ayo-Gegeoju-CV.pdf') once the file is in /public to show the Download CV button.
-const CV_URL = null
 
 document.querySelector('#app').innerHTML = `
   <div id="page-root" class="page-enter bg-transparent text-[#0b1530] selection:bg-[#3082BE] selection:text-white relative overflow-hidden">
@@ -82,10 +80,7 @@ document.querySelector('#app').innerHTML = `
                   <span class="inline-flex transition-transform group-hover:translate-y-0.5">${arrow('down')}</span>
                 </a>
 
-                ${CV_URL ? `<a href="${CV_URL}" target="_blank" rel="noopener" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
-                  Download CV
-                  <span class="inline-flex transition-transform group-hover:translate-y-0.5">${arrow('down')}</span>
-                </a>` : ''}
+                ${cvButton()}
 
                 <a href="/contact.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                   Get in touch

@@ -3,6 +3,7 @@ import './cursor.js'
 import portraitImg from './assets/portrait.webp'
 import logoImg from './assets/logo.png'
 import { arrow } from './icons.js'
+import { cvButton } from './cv.js'
 
 const proofProjects = [
   'Coverage Trackr',
@@ -154,6 +155,8 @@ document.querySelector('#app').innerHTML = `
                     Contact me
                     <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                   </a>
+
+                  ${cvButton()}
                 </div>
               </div>
 

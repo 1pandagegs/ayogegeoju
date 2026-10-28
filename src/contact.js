@@ -2,6 +2,7 @@ import './style.css'
 import './cursor.js'
 import logoImg from './assets/logo.png'
 import { arrow } from './icons.js'
+import { cvButton } from './cv.js'
 
 const contactOptions = [
   {
@@ -117,6 +118,8 @@ document.querySelector('#app').innerHTML = `
                   View work
                   <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                 </a>
+
+                ${cvButton()}
               </div>
             </div>
 
