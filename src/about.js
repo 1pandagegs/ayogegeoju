@@ -2,6 +2,7 @@ import './style.css'
 import './cursor.js'
 import portraitImg from './assets/hero-bg.webp'
 import logoImg from './assets/logo.png'
+import { arrow } from './icons.js'
 
 const proofProjects = [
   'Coverage Trackr',
@@ -83,7 +84,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
           Get in touch
-          <span>→</span>
+          <span class="inline-flex">${arrow('right')}</span>
         </a>
 
         <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 text-[#0b1530] hover:bg-white/85 transition">
@@ -146,12 +147,12 @@ document.querySelector('#app').innerHTML = `
                 <div class="mt-10 flex flex-wrap gap-4">
                   <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                     View work
-                    <span class="transition-transform group-hover:translate-x-1">→</span>
+                    <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                   </a>
 
                   <a href="/contact.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                     Contact me
-                    <span class="transition-transform group-hover:translate-x-1">→</span>
+                    <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                   </a>
                 </div>
               </div>
@@ -337,12 +338,12 @@ document.querySelector('#app').innerHTML = `
             <div class="flex flex-wrap gap-4 lg:justify-end">
               <a href="mailto:aogegeoju0@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                 Email me
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
 
               <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 View work
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
             </div>
           </div>

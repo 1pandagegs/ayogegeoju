@@ -71,8 +71,8 @@ export const projects = [
     title: 'PayTrack SME',
     tags: ['code', 'product'],
     featured: true,
-    label: 'Fintech / Designed + Built',
-    desc: 'A lightweight payment management system for small businesses: payment requests, transactions, reconciliation and reports.',
+    label: 'Fintech / IT PGD Final Project',
+    desc: 'My final project for my IT postgraduate diploma: a payment management system for small businesses, with payment requests, reconciliation and reports.',
     href: '/work-paytrack-sme.html',
     image: paytrackCover
   },

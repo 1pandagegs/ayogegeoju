@@ -53,6 +53,7 @@ import bApparel1 from './assets/brand/brand-apparel-1.webp'
 import bApparel2 from './assets/brand/brand-apparel-2.webp'
 import bApparel3 from './assets/brand/brand-apparel-3.webp'
 import bApparel4 from './assets/brand/brand-apparel-4.webp'
+import { arrow } from './icons.js'
 
 const brandTabs = [
   { label: 'All', value: 'all' },
@@ -179,7 +180,7 @@ function projectCard(project, index) {
           class="group/link inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-[#3082BE] transition"
         >
           ${project.external ? 'View live project' : project.href === '#' ? 'Coming soon' : 'View project'}
-          <span class="transition-transform group-hover/link:translate-x-1">↗</span>
+          <span class="inline-flex transition-transform group-hover/link:translate-x-1">${arrow(project.external ? 'up-right' : 'right')}</span>
         </a>
       </div>
     </article>
@@ -337,7 +338,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
           Get in touch
-          <span>→</span>
+          <span class="inline-flex">${arrow('right')}</span>
         </a>
 
         <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 text-[#0b1530] hover:bg-white/85 transition">
@@ -451,7 +452,7 @@ document.querySelector('#app').innerHTML = `
             </div>
             <a href="https://www.figma.com/design/BRJZI2BZaML2Mt398bFUfB/Ayo-Gegeoju?node-id=4-2035&t=E6oBKro4XfmUPviI-1" target="_blank" rel="noopener noreferrer" class="group/figma inline-flex items-center gap-2 rounded-full border border-white/80 glass text-slate-700 px-5 py-2.5 text-xs font-semibold hover:bg-[#0b1530] hover:text-black hover:border-[#0b1530] transition duration-300">
               View Figma Workspace
-              <span class="transition-transform group-hover/figma:translate-x-0.5">↗</span>
+              <span class="inline-flex transition-transform group-hover/figma:translate-x-0.5">${arrow('up-right')}</span>
             </a>
           </div>
         </div>
@@ -490,12 +491,12 @@ document.querySelector('#app').innerHTML = `
             <div class="flex flex-wrap gap-4 lg:justify-end">
               <a href="mailto:aogegeoju0@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                 Email me
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
 
               <a href="/about.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 About me
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
             </div>
           </div>

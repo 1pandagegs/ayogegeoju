@@ -3,6 +3,7 @@ import './cursor.js'
 import logoImg from './assets/logo.png'
 import homeAbroadImg from './assets/home-and-abroad-cover.webp'
 import fallbackImg from './assets/home-and-abroad-cover.webp'
+import { arrow } from './icons.js'
 
 const roleItems = [
   'Product Design',
@@ -67,7 +68,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="https://homeandabroad.ng/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
           Live project
-          <span>↗</span>
+          <span class="inline-flex">${arrow('up-right')}</span>
         </a>
 
         <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 text-[#0b1530] hover:bg-white/85 transition">
@@ -95,7 +96,7 @@ document.querySelector('#app').innerHTML = `
             <div class="relative z-10 flex items-start justify-between gap-8">
               <div>
                 <a href="/work.html" class="group inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#3082BE] transition-colors duration-200 mb-5">
-                  <span class="transition-transform duration-200 group-hover:-translate-x-1">←</span>
+                  <span class="inline-flex transition-transform duration-200 group-hover:-translate-x-1">${arrow('left')}</span>
                   Back to work
                 </a>
 
@@ -127,12 +128,12 @@ document.querySelector('#app').innerHTML = `
               <div class="mt-10 flex flex-wrap gap-4">
                 <a href="https://homeandabroad.ng/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                   Visit live project
-                  <span class="transition-transform group-hover:translate-x-1">↗</span>
+                  <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('up-right')}</span>
                 </a>
 
                 <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                   More projects
-                  <span class="transition-transform group-hover:translate-x-1">→</span>
+                  <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                 </a>
               </div>
             </div>
@@ -283,12 +284,12 @@ document.querySelector('#app').innerHTML = `
             <div class="flex flex-wrap gap-4 lg:justify-end">
               <a href="https://homeandabroad.ng/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                 Visit live project
-                <span class="transition-transform group-hover:translate-x-1">↗</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('up-right')}</span>
               </a>
 
               <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 More work
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
             </div>
           </div>

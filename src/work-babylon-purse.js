@@ -25,7 +25,6 @@ renderCaseStudy({
       "value": "Vercel"
     }
   ],
-  "repoLink": "https://github.com/1pandagegs/babylon-purse",
   "overviewTitle": "Turning old money rules into a daily tool.",
   "overview": [
     "The book's rules are simple: pay yourself first, clear debts steadily, control your spending and protect your savings. Following them by hand is the hard part.",

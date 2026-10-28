@@ -5,6 +5,7 @@ import portraitImg from './assets/hero-bg.webp'
 
 
 import { projects } from './projects-data.js'
+import { arrow } from './icons.js'
 
 const selectedProducts = projects.filter(project => project.featured)
 const galleryProjects = projects.filter(project => !project.featured).slice(0, 8)
@@ -36,7 +37,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
           Get in touch
-          <span>→</span>
+          <span class="inline-flex">${arrow('right')}</span>
         </a>
 
         <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 text-[#0b1530] hover:bg-white/85 transition">
@@ -78,17 +79,17 @@ document.querySelector('#app').innerHTML = `
               <div class="mt-9 flex flex-wrap gap-3">
                 <a href="#work" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition shadow-[0_14px_30px_-14px_rgba(11,21,48,0.6)]">
                   View my work
-                  <span class="transition-transform group-hover:translate-x-1">↗</span>
+                  <span class="inline-flex transition-transform group-hover:translate-y-0.5">${arrow('down')}</span>
                 </a>
 
                 ${CV_URL ? `<a href="${CV_URL}" target="_blank" rel="noopener" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                   Download CV
-                  <span class="transition-transform group-hover:translate-y-0.5">↓</span>
+                  <span class="inline-flex transition-transform group-hover:translate-y-0.5">${arrow('down')}</span>
                 </a>` : ''}
 
                 <a href="/contact.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                   Get in touch
-                  <span class="transition-transform group-hover:translate-x-1">→</span>
+                  <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                 </a>
               </div>
 
@@ -162,7 +163,7 @@ document.querySelector('#app').innerHTML = `
 
             <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
               See all projects
-              <span class="transition-transform group-hover:translate-x-1">→</span>
+              <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
             </a>
           </div>
         </div>
@@ -199,7 +200,7 @@ document.querySelector('#app').innerHTML = `
                   class="group/link inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-[#3082BE] transition"
                 >
                   ${project.external ? 'View live project' : 'View case study'}
-                  <span class="transition-transform group-hover/link:translate-x-1">↗</span>
+                  <span class="inline-flex transition-transform group-hover/link:translate-x-1">${arrow(project.external ? 'up-right' : 'right')}</span>
                 </a>
               </div>
             </article>
@@ -307,7 +308,7 @@ document.querySelector('#app').innerHTML = `
 
               <a href="/about.html" class="group inline-flex w-fit items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 Read more
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
             </div>
           </div>
@@ -330,12 +331,12 @@ document.querySelector('#app').innerHTML = `
             <div class="flex flex-wrap gap-4 lg:justify-end">
               <a href="mailto:aogegeoju0@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                 Email me
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
 
               <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 View work
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
             </div>
           </div>

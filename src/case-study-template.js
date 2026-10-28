@@ -1,6 +1,7 @@
 import './cursor.js'
 import logoImg from './assets/logo.png'
 import fallbackImg from './assets/coverage-trackr-cover.webp'
+import { arrow } from './icons.js'
 
 function renderSections(project) {
   if (!project.sections || !project.sections.length) return ''
@@ -107,7 +108,7 @@ export function renderCaseStudy(project) {
 
           ${project.liveLink ? `
             <a href="${project.liveLink}" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
-              Live project <span>↗</span>
+              Live project <span class="inline-flex">${arrow('up-right')}</span>
             </a>
           ` : ''}
         </div>
@@ -122,7 +123,7 @@ export function renderCaseStudy(project) {
               <div class="relative z-10 flex items-start justify-between gap-8">
                 <div>
                   <a href="/work.html" class="group inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#3082BE] mb-5">
-                    <span class="transition-transform group-hover:-translate-x-1">←</span>
+                    <span class="inline-flex transition-transform group-hover:-translate-x-1">${arrow('left')}</span>
                     Back to work
                   </a>
 
@@ -149,20 +150,20 @@ export function renderCaseStudy(project) {
                   ${project.liveLink ? `
                     <a href="${project.liveLink}" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                       Visit live project
-                      <span class="transition-transform group-hover:translate-x-1">↗</span>
+                      <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('up-right')}</span>
                     </a>
                   ` : ''}
 
                   ${project.repoLink ? `
                     <a href="${project.repoLink}" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                       View code on GitHub
-                      <span class="transition-transform group-hover:translate-x-1">↗</span>
+                      <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('up-right')}</span>
                     </a>
                   ` : ''}
 
                   <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                     More projects
-                    <span class="transition-transform group-hover:translate-x-1">→</span>
+                    <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
                   </a>
                 </div>
               </div>
@@ -221,7 +222,7 @@ ${renderStack(project)}
 
               <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                 More work
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="inline-flex transition-transform group-hover:translate-x-1">${arrow('right')}</span>
               </a>
             </div>
           </div>

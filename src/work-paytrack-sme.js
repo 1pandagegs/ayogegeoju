@@ -6,15 +6,15 @@ renderCaseStudy({
   ...{
   "title": "PayTrack SME",
   "category": "Fintech / Designed + Built",
-  "summary": "A lightweight digital payment management system for small businesses. I designed it in Figma and built it with HTML, CSS, JavaScript and Supabase as my postgraduate IT project, using two real Abuja SMEs as the case studies.",
+  "summary": "A lightweight digital payment management system for small businesses. I designed it in Figma and built it with HTML, CSS, JavaScript and Supabase as the final project for my Postgraduate Diploma (PGD) in Information Technology, using two real Abuja SMEs as the case studies.",
   "meta": [
     {
       "label": "Role",
       "value": "Product design + development"
     },
     {
-      "label": "Type",
-      "value": "Postgraduate IT project"
+      "label": "Project",
+      "value": "IT PGD final project"
     },
     {
       "label": "Users",
@@ -26,7 +26,6 @@ renderCaseStudy({
     }
   ],
   "liveLink": "https://paytrack-sme.vercel.app",
-  "repoLink": "https://github.com/1pandagegs/paytrack-sme",
   "overviewTitle": "Helping small businesses know who has paid, and who has not.",
   "overview": [
     "Many SMEs track customer payments across bank alerts, WhatsApp and spreadsheets, which makes it hard to know what is outstanding or to match a transfer to the right invoice.",
