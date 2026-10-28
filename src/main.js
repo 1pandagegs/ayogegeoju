@@ -1,218 +1,124 @@
 import './style.css'
 import './cursor.js'
 import logoImg from './assets/logo.png'
-import portraitImg from './assets/hero-bg.png'
+import portraitImg from './assets/hero-bg.webp'
 
-import coverageTrackrImg from './assets/coverage-trackr-cover.png'
-import homeAbroadImg from './assets/home-and-abroad-cover.png'
-import swiftentryImg from './assets/swiftentry-cover.png'
-import sydaarLmsImg from './assets/sydaar-lms-cover.png'
-import prmtImg from './assets/resource-trackr-cover.png'
-import manorrImg from './assets/manorr-cover.png'
-import mundayneImg from './assets/mundayne-cover.png'
-import nuellizImg from './assets/nuelliz-launch-tracker-cover.png'
-import gojuDesignImg from './assets/goju-design-cover.png'
-import sabaliImg from './assets/sabali-limited-cover.png'
-import amfhImg from './assets/a-message-for-her-cover.png'
-import hemoTrackrImg from './assets/hemotrackr-cover.png'
 
-const selectedProducts = [
-  {
-    title: 'Coverage Trackr',
-    label: 'Public Health / Micro-Planning',
-    desc: 'A micro-planning platform designed to support intervention planning, data collection, and coverage visibility across different country contexts.',
-    href: '/work-coverage-trackr.html',
-    image: coverageTrackrImg
-  },
-  {
-    title: 'Home and Abroad',
-    label: 'PropTech / Government Platform',
-    desc: 'A NIDCOM-backed real estate listing platform helping Nigerians in Diaspora explore property opportunities with more trust and clarity.',
-    href: '/work-home-and-abroad.html',
-    image: homeAbroadImg
-  },
-  {
-    title: 'SwiftEntry',
-    label: 'Visitor Management System',
-    desc: 'A visitor management product designed to improve check-in, tracking, and operational visibility for organizations and estates.',
-    href: 'https://theswiftentry.com/',
-    image: swiftentryImg,
-    external: true
-  },
-  {
-    title: 'SYDAAR LMS',
-    label: 'Learning Management System',
-    desc: 'A gamified learning management system for internal organizational training across large institutions and teams.',
-    href: 'https://sydaar.com/',
-    image: sydaarLmsImg,
-    external: true
-  }
-]
+import { projects } from './projects-data.js'
 
-const galleryProjects = [
-  {
-    title: 'Resource Trackr',
-    label: 'Enterprise / Operations',
-    image: prmtImg,
-    href: '/work-prmt.html'
-  },
-  {
-    title: 'Manorr',
-    label: 'Real Estate / Estate Operations',
-    image: manorrImg,
-    href: '/work-manorr.html'
-  },
-  {
-    title: 'Mundayne',
-    label: 'Habit Tracker / Mobile App',
-    image: mundayneImg,
-    href: '/work-mundayne.html'
-  },
-  {
-    title: 'Nuelliz Launch Tracker',
-    label: 'Dashboard / Web App',
-    image: nuellizImg,
-    href: '/work-nuelliz.html'
-  },
-  {
-    title: 'Goju Design',
-    label: 'Studio Website',
-    image: gojuDesignImg,
-    href: '/work-goju-design.html'
-  },
-  {
-    title: 'Sabali Limited',
-    label: 'Agro / Corporate Website',
-    image: sabaliImg,
-    href: '/work-sabali.html'
-  },
-  {
-    title: 'A Message For Her',
-    label: 'Podcast Website',
-    image: amfhImg,
-    href: '/work-amfh.html'
-  },
-  {
-    title: 'Hemo Trackr',
-    label: 'HealthTech / System Design',
-    image: hemoTrackrImg,
-    href: '/work-hemo-trackr.html'
-  }
-]
+const selectedProducts = projects.filter(project => project.featured)
+const galleryProjects = projects.filter(project => !project.featured).slice(0, 8)
+
+// Set to the CV's path (e.g. '/Ayo-Gegeoju-CV.pdf') once the file is in /public to show the Download CV button.
+const CV_URL = null
 
 document.querySelector('#app').innerHTML = `
-  <div id="page-root" class="page-enter bg-[#020617] text-white selection:bg-[#3082BE] selection:text-black relative overflow-hidden">
+  <div id="page-root" class="page-enter bg-transparent text-[#0b1530] selection:bg-[#3082BE] selection:text-white relative overflow-hidden">
 
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div class="absolute left-[-12%] top-[80px] h-[420px] w-[420px] rounded-full bg-[#3082BE]/20 blur-[150px]"></div>
-      <div class="absolute right-[-12%] top-[480px] h-[420px] w-[420px] rounded-full bg-cyan-400/10 blur-[160px]"></div>
-      <div class="absolute left-[30%] bottom-[120px] h-[360px] w-[360px] rounded-full bg-white/5 blur-[140px]"></div>
+      <div class="absolute right-[-12%] top-[480px] h-[420px] w-[420px] rounded-full bg-violet-300/30 blur-[160px]"></div>
+      <div class="absolute left-[30%] bottom-[120px] h-[360px] w-[360px] rounded-full glass blur-[140px]"></div>
     </div>
 
-    <nav class="fixed top-0 w-full z-50 bg-[#020617]/60 backdrop-blur-xl border-b border-white/5">
+    <nav class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl border-b border-white/80">
       <div class="max-w-[1500px] mx-auto px-5 md:px-8 h-[76px] flex items-center justify-between">
         <a href="/index.html" class="inline-flex items-center">
           <img src="${logoImg}" alt="Ayo Gegeoju logo" class="h-8 w-auto" />
         </a>
 
         <div class="hidden md:flex items-center gap-8 text-[13px]">
-          <a href="/index.html" class="text-white transition-colors duration-200">Home</a>
-          <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
-          <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
-          <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
+          <a href="/index.html" class="text-[#0b1530] transition-colors duration-200">Home</a>
+          <a href="/work.html" class="text-slate-600 hover:text-[#3082BE] transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-600 hover:text-[#3082BE] transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-600 hover:text-[#3082BE] transition-colors duration-200">Contact</a>
         </div>
 
-        <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full bg-white text-[#020617] px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
+        <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-5 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
           Get in touch
           <span>→</span>
         </a>
 
-        <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white hover:bg-white/5 transition">
+        <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 text-[#0b1530] hover:bg-white/85 transition">
           ☰
         </button>
       </div>
 
-      <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 pb-6 pt-4">
+      <div id="mobile-menu" class="md:hidden hidden border-t border-white/80 px-6 pb-6 pt-4">
         <div class="flex flex-col gap-4 text-sm">
-          <a href="/index.html" class="text-white transition-colors duration-200">Home</a>
-          <a href="/work.html" class="text-slate-300 hover:text-white transition-colors duration-200">Work</a>
-          <a href="/about.html" class="text-slate-300 hover:text-white transition-colors duration-200">About</a>
-          <a href="/contact.html" class="text-slate-300 hover:text-white transition-colors duration-200">Contact</a>
+          <a href="/index.html" class="text-[#0b1530] transition-colors duration-200">Home</a>
+          <a href="/work.html" class="text-slate-600 hover:text-[#3082BE] transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-600 hover:text-[#3082BE] transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-600 hover:text-[#3082BE] transition-colors duration-200">Contact</a>
         </div>
       </div>
     </nav>
 
     <main class="px-6 md:px-8 pt-24 pb-10">
 
-      <section class="w-full max-w-[1600px] mx-auto fade-up min-h-[calc(100vh-96px)] flex items-center">
-        <div class="w-full rounded-[36px] md:rounded-[52px] overflow-hidden border border-white/10 bg-white/[0.03] shadow-2xl">
-          <div class="relative min-h-[calc(100vh-120px)] p-6 md:p-10 lg:p-14 flex flex-col justify-between">
+      <section class="w-full max-w-[1500px] mx-auto fade-up">
+        <div class="relative rounded-[36px] md:rounded-[48px] border border-white/80 glass overflow-hidden">
+          <div aria-hidden="true" class="orb float-slow absolute -right-10 -bottom-16 h-44 w-44 opacity-70 hidden md:block"></div>
+          <div class="relative grid lg:grid-cols-[1.08fr_0.92fr] gap-10 lg:gap-6 items-center p-6 md:p-10 lg:p-14 min-h-[calc(100vh-140px)]">
 
-            <div class="absolute inset-0" id="hero-slideshow">
-              <img id="hero-bg-1" src="${selectedProducts[0].image}" alt="Featured Project" class="absolute inset-0 h-full w-full object-cover opacity-35 scale-105 transition-opacity duration-1000" />
-              <img id="hero-bg-2" src="" alt="Featured Project" class="absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-opacity duration-1000" />
-              <div class="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/85 to-[#020617]/40"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-[#020617]/20"></div>
-            </div>
+            <div>
+              <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-5">Hello, I'm</p>
 
-            <div class="relative z-10 flex items-start justify-between gap-8">
-              <div>
-                <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-3">
-                  Ayo Gegeoju
-                </p>
-                <p class="text-sm text-slate-300">
-                  Product Designer / Systems Designer / Frontend Builder
-                </p>
-              </div>
-
-              <div class="hidden lg:block max-w-[330px]">
-                <p class="text-2xl font-semibold leading-tight tracking-[-0.03em]">
-                  Great products feel simple because the complexity has been designed properly.
-                </p>
-                <p class="mt-4 text-sm text-slate-400 leading-relaxed">
-                  I design interfaces for workflows, dashboards, systems, and digital experiences that need to feel clear, credible, and useful.
-                </p>
-              </div>
-            </div>
-
-            <div class="relative z-10 max-w-6xl">
-              <p class="text-sm uppercase tracking-[0.25em] text-white/50 mb-5">
-                Product systems for real-world operations
-              </p>
-
-              <h1 class="text-5xl md:text-7xl lg:text-[104px] font-extrabold leading-[0.9] tracking-[-0.06em] max-w-6xl">
-                Designing enterprise systems, digital products, and platforms people trust.
+              <h1 class="text-5xl md:text-6xl lg:text-[78px] font-bold leading-[0.95] tracking-[-0.05em]">
+                Ayo Gegeoju
               </h1>
-
-              <p class="mt-8 text-lg md:text-[21px] text-slate-300 max-w-3xl leading-[1.8]">
-                From public-health platforms and government-backed products to SaaS tools, real-estate ecosystems, dashboards, websites, and brand experiences.
+              <p class="mt-3 text-3xl md:text-4xl lg:text-[40px] font-bold leading-[1.05] tracking-[-0.04em] text-gradient">
+                Product Designer &amp; Design Engineer
               </p>
 
-              <div class="mt-10 mb-14 flex flex-wrap gap-4">
-                <a href="#work" class="group inline-flex items-center gap-2 rounded-full bg-white text-[#020617] px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
-                  View work
-                  <span class="transition-transform group-hover:translate-x-1">→</span>
+              <p class="mt-7 text-lg text-slate-600 max-w-xl leading-[1.75]">
+                I design products, then build them. 5+ years designing government, health and SaaS platforms, plus apps, websites and AI tools I have coded and shipped myself.
+              </p>
+
+              <div class="mt-9 flex flex-wrap gap-3">
+                <a href="#work" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition shadow-[0_14px_30px_-14px_rgba(11,21,48,0.6)]">
+                  View my work
+                  <span class="transition-transform group-hover:translate-x-1">↗</span>
                 </a>
 
-                <a href="/contact.html" class="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold hover:border-white/35 transition">
+                ${CV_URL ? `<a href="${CV_URL}" target="_blank" rel="noopener" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
+                  Download CV
+                  <span class="transition-transform group-hover:translate-y-0.5">↓</span>
+                </a>` : ''}
+
+                <a href="/contact.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                   Get in touch
                   <span class="transition-transform group-hover:translate-x-1">→</span>
                 </a>
               </div>
+
+              <div class="mt-12">
+                <p class="text-xs uppercase tracking-[0.22em] text-slate-400 mb-4">Products designed for</p>
+                <div class="flex flex-wrap gap-x-7 gap-y-3 text-[15px] font-semibold text-slate-400">
+                  ${['Sydani Group', 'NIDCOM', 'Government of Nepal', 'Amref', 'Brik CRM', 'AS5 Group'].map(name => `<span>${name}</span>`).join('')}
+                </div>
+              </div>
             </div>
 
-            <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
-              ${[
-                ['#01', 'Public Health Systems'],
-                ['#02', 'Government Platforms'],
-                ['#03', 'SaaS & Dashboards'],
-                ['#04', 'Web & Brand Experiences']
-              ].map(item => `
-                <div class="rounded-[22px] border border-white/10 bg-black/20 backdrop-blur-xl p-4">
-                  <p class="text-[11px] uppercase tracking-[0.22em] text-[#3082BE] mb-2">${item[0]}</p>
-                  <p class="text-sm text-slate-200">${item[1]}</p>
+            <div class="relative mx-auto w-full max-w-[520px]">
+              <div aria-hidden="true" class="absolute -inset-6 rounded-[48px] bg-gradient-to-br from-[#3082BE]/25 via-violet-300/25 to-transparent blur-2xl"></div>
+              <div class="relative rounded-[40px] border border-white/90 glass p-3">
+                <div class="media-frame aspect-[4/4.6]">
+                  <img src="${portraitImg}" alt="Portrait of Ayo Gegeoju" class="h-full w-full object-cover object-top" />
                 </div>
-              `).join('')}
+              </div>
+
+              <div class="absolute -right-3 md:-right-8 top-8 rounded-[24px] border border-white/90 glass px-5 py-4 text-center float-slow">
+                <p class="text-4xl font-bold tracking-[-0.04em] text-gradient">5+</p>
+                <p class="text-xs text-slate-500 leading-tight mt-1">Years of<br/>experience</p>
+              </div>
+
+              <div class="hidden sm:block absolute -left-3 md:-left-10 bottom-10 rounded-[24px] border border-white/90 glass px-5 py-4">
+                <p class="text-xs text-slate-500">Designs, codes &amp; ships</p>
+                <div class="mt-2 flex items-center gap-2">
+                  ${['Figma', 'React', 'Next.js', 'AI'].map(tag => `<span class="rounded-full bg-white/80 border border-white px-2.5 py-1 text-[11px] font-semibold text-[#3082BE]">${tag}</span>`).join('')}
+                </div>
+              </div>
             </div>
 
           </div>
@@ -220,15 +126,15 @@ document.querySelector('#app').innerHTML = `
       </section>
 
       <section class="max-w-[1500px] mx-auto mt-8">
-        <div class="rounded-[36px] bg-[#05070c] border border-white/5 px-6 md:px-10 py-8">
+        <div class="rounded-[36px] glass border border-white/80 px-6 md:px-10 py-8">
           <div class="grid gap-6 md:grid-cols-[220px_1fr] items-center">
             <p class="text-sm text-slate-500 leading-relaxed">
               Selected products and platforms I’ve helped shape
             </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-sm text-slate-300">
-              ${['Coverage Trackr', 'Home & Abroad', 'SwiftEntry', 'SYDAAR LMS', 'Manorr', 'PRMT'].map(item => `
-                <div class="rounded-full border border-white/8 bg-white/[0.02] px-4 py-3 text-center">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-sm text-slate-600">
+              ${['Home & Abroad', 'Nepal Dashboard', 'Coverage Trackr', 'SYDAAR LMS', 'Pathfinder AI', 'PayTrack SME'].map(item => `
+                <div class="rounded-full border border-white/80 glass px-4 py-3 text-center">
                   ${item}
                 </div>
               `).join('')}
@@ -244,17 +150,17 @@ document.querySelector('#app').innerHTML = `
               Selected Products
             </p>
 
-            <h2 class="text-4xl md:text-6xl font-extrabold leading-[0.95] tracking-[-0.05em] max-w-3xl">
-              Products designed to simplify complex workflows.
+            <h2 class="text-4xl md:text-5xl font-bold leading-[0.95] tracking-[-0.05em] max-w-3xl">
+              Designed for real users. Many of them built by me too.
             </h2>
           </div>
 
           <div class="lg:justify-self-end max-w-xl">
-            <p class="text-lg text-slate-400 leading-relaxed mb-6">
-              A focused selection of systems, platforms, and digital products across public health, government, real estate, healthcare, and enterprise operations.
+            <p class="text-lg text-slate-500 leading-relaxed mb-6">
+              A selection across public health, government, real estate, fintech and AI, from Figma to production code.
             </p>
 
-            <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold hover:border-white/30 transition">
+            <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
               See all projects
               <span class="transition-transform group-hover:translate-x-1">→</span>
             </a>
@@ -263,8 +169,8 @@ document.querySelector('#app').innerHTML = `
 
         <div class="grid lg:grid-cols-2 gap-5">
           ${selectedProducts.map((project, index) => `
-            <article class="group rounded-[34px] border border-white/8 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition">
-              <div class="h-[280px] md:h-[360px] overflow-hidden bg-slate-900">
+            <article class="group rounded-[34px] border border-white/80 glass overflow-hidden hover:bg-white/85 transition">
+              <div class="m-3 mb-0 aspect-[3/2] media-frame">
                 <img src="${project.image}" alt="${project.title}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
               </div>
 
@@ -283,14 +189,14 @@ document.querySelector('#app').innerHTML = `
                   ${project.title}
                 </h3>
 
-                <p class="text-slate-400 leading-relaxed mb-7">
+                <p class="text-slate-500 leading-relaxed mb-7">
                   ${project.desc}
                 </p>
 
                 <a
                   href="${project.href}"
                   ${project.external ? 'target="_blank" rel="noopener noreferrer"' : ''}
-                  class="group/link inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-white transition"
+                  class="group/link inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-[#3082BE] transition"
                 >
                   ${project.external ? 'View live project' : 'View case study'}
                   <span class="transition-transform group-hover/link:translate-x-1">↗</span>
@@ -302,14 +208,14 @@ document.querySelector('#app').innerHTML = `
       </section>
 
       <section class="max-w-[1500px] mx-auto mt-28">
-        <div class="rounded-[40px] border border-white/8 bg-white/[0.03] p-6 md:p-10">
+        <div class="rounded-[40px] border border-white/80 glass p-6 md:p-10">
           <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start">
             <div>
               <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-5">
                 What I Design
               </p>
 
-              <h2 class="text-4xl md:text-6xl font-extrabold leading-[0.95] tracking-[-0.05em]">
+              <h2 class="text-4xl md:text-5xl font-bold leading-[0.95] tracking-[-0.05em]">
                 Products built for real-world operations.
               </h2>
             </div>
@@ -323,9 +229,9 @@ document.querySelector('#app').innerHTML = `
                 ['Learning Systems', 'Training platforms and LMS products for organizations.'],
                 ['Web & Brand Experiences', 'Websites, visual identity, and marketing systems for brands.']
               ].map(item => `
-                <div class="rounded-[26px] border border-white/8 bg-[#020617]/70 p-6">
+                <div class="rounded-[26px] border border-white/80 bg-white/70 p-6">
                   <h3 class="text-xl font-semibold mb-3">${item[0]}</h3>
-                  <p class="text-slate-400 leading-relaxed">${item[1]}</p>
+                  <p class="text-slate-500 leading-relaxed">${item[1]}</p>
                 </div>
               `).join('')}
             </div>
@@ -339,20 +245,20 @@ document.querySelector('#app').innerHTML = `
             <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-5">
               Project Gallery
             </p>
-            <h2 class="text-4xl md:text-6xl font-extrabold leading-[0.95] tracking-[-0.05em]">
+            <h2 class="text-4xl md:text-5xl font-bold leading-[0.95] tracking-[-0.05em]">
               More systems, websites, and visual work.
             </h2>
           </div>
 
-          <p class="text-lg text-slate-400 leading-relaxed max-w-xl lg:justify-self-end">
+          <p class="text-lg text-slate-500 leading-relaxed max-w-xl lg:justify-self-end">
             A wider body of work across product design, web development, brand identity, marketing design, dashboards, mobile apps, and product experiments.
           </p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           ${galleryProjects.map((item, index) => `
-            <a href="${item.href}" class="group rounded-[30px] border border-white/8 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition duration-300 hover:-translate-y-1 block">
-              <div class="h-[220px] bg-slate-900 overflow-hidden">
+            <a href="${item.href}" class="group rounded-[30px] border border-white/80 glass overflow-hidden hover:bg-white/85 transition duration-300 hover:-translate-y-1 block">
+              <div class="m-2.5 mb-0 aspect-[3/2] media-frame">
                 <img src="${item.image}" alt="${item.title}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" />
               </div>
 
@@ -371,15 +277,15 @@ document.querySelector('#app').innerHTML = `
       </section>
 
       <section class="max-w-[1500px] mx-auto mt-28">
-        <div class="rounded-[40px] border border-white/8 bg-[#05070c] overflow-hidden">
+        <div class="rounded-[40px] border border-white/80 glass overflow-hidden">
           <div class="grid lg:grid-cols-[0.9fr_1.1fr]">
-            <div class="min-h-[420px] bg-slate-900">
-              <div class="h-full w-full flex items-center justify-center bg-[#3082BE]/10">
+            <div class="min-h-[420px] bg-[#e8edf7]">
+              <div class="h-full w-full flex items-center justify-center glass-tint">
                 <div class="text-center px-8">
                   <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-4">
                     About Ayo
                   </p>
-                  <p class="text-3xl md:text-5xl font-extrabold tracking-[-0.05em]">
+                  <p class="text-3xl md:text-5xl font-bold tracking-[-0.05em]">
                     Systems thinking before interface polish.
                   </p>
                 </div>
@@ -391,15 +297,15 @@ document.querySelector('#app').innerHTML = `
                 Behind the Work
               </p>
 
-              <h2 class="text-4xl md:text-6xl font-extrabold leading-[0.95] tracking-[-0.05em] mb-6">
+              <h2 class="text-4xl md:text-5xl font-bold leading-[0.95] tracking-[-0.05em] mb-6">
                 I help teams simplify complexity.
               </h2>
 
-              <p class="text-lg text-slate-400 leading-relaxed mb-8">
+              <p class="text-lg text-slate-500 leading-relaxed mb-8">
                 My work combines product strategy, interface design, visual direction, and frontend implementation. I’m most interested in products where the design challenge is structural, not just aesthetic.
               </p>
 
-              <a href="/about.html" class="group inline-flex w-fit items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold hover:border-white/30 transition">
+              <a href="/about.html" class="group inline-flex w-fit items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 Read more
                 <span class="transition-transform group-hover:translate-x-1">→</span>
               </a>
@@ -409,25 +315,25 @@ document.querySelector('#app').innerHTML = `
       </section>
 
       <section class="max-w-[1500px] mx-auto mt-20 mb-6">
-        <div class="rounded-[40px] border border-white/8 bg-[#3082BE]/10 p-8 md:p-12">
+        <div class="rounded-[40px] border border-white/80 glass-tint p-8 md:p-12">
           <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
             <div>
               <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-5">
                 Contact
               </p>
 
-              <h2 class="text-4xl md:text-6xl font-extrabold leading-[0.95] tracking-[-0.05em] max-w-3xl">
+              <h2 class="text-4xl md:text-5xl font-bold leading-[0.95] tracking-[-0.05em] max-w-3xl">
                 Let’s build something useful, clear, and memorable.
               </h2>
             </div>
 
             <div class="flex flex-wrap gap-4 lg:justify-end">
-              <a href="mailto:aogegeoju0@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-white text-[#020617] px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
+              <a href="mailto:aogegeoju0@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-[#0b1530] text-white px-6 py-3 text-sm font-semibold hover:bg-[#3082BE] hover:text-white transition">
                 Email me
                 <span class="transition-transform group-hover:translate-x-1">→</span>
               </a>
 
-              <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold hover:border-white/30 transition">
+              <a href="/work.html" class="group inline-flex items-center gap-2 rounded-full glass border border-white/80 px-6 py-3 text-sm font-semibold hover:border-[#3082BE]/40 transition">
                 View work
                 <span class="transition-transform group-hover:translate-x-1">→</span>
               </a>
@@ -438,16 +344,16 @@ document.querySelector('#app').innerHTML = `
 
     </main>
 
-    <footer class="px-6 md:px-8 py-10 border-t border-white/10 bg-[#020617]">
-      <div class="max-w-[1500px] mx-auto rounded-[28px] border border-white/8 bg-white/[0.03] px-6 md:px-8 py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+    <footer class="px-6 md:px-8 py-10 border-t border-white/80 bg-transparent">
+      <div class="max-w-[1500px] mx-auto rounded-[28px] border border-white/80 glass px-6 md:px-8 py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p class="text-sm text-slate-500">
           © 2026 Ayo Gegeoju
         </p>
 
         <div class="flex items-center gap-6 text-sm">
-          <a href="/work.html" class="text-slate-400 hover:text-white transition-colors duration-200">Work</a>
-          <a href="/about.html" class="text-slate-400 hover:text-white transition-colors duration-200">About</a>
-          <a href="/contact.html" class="text-slate-400 hover:text-white transition-colors duration-200">Contact</a>
+          <a href="/work.html" class="text-slate-500 hover:text-[#3082BE] transition-colors duration-200">Work</a>
+          <a href="/about.html" class="text-slate-500 hover:text-[#3082BE] transition-colors duration-200">About</a>
+          <a href="/contact.html" class="text-slate-500 hover:text-[#3082BE] transition-colors duration-200">Contact</a>
         </div>
       </div>
     </footer>
@@ -480,12 +386,7 @@ if (pageRoot) {
 }
 
 // ---- Hero Slideshow ----
-const slideshowImages = [
-  coverageTrackrImg,
-  homeAbroadImg,
-  swiftentryImg,
-  sydaarLmsImg
-]
+const slideshowImages = selectedProducts.map(project => project.image)
 let currentSlideIndex = 0
 const bg1 = document.querySelector('#hero-bg-1')
 const bg2 = document.querySelector('#hero-bg-2')

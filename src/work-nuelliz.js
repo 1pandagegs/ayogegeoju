@@ -1,5 +1,5 @@
 import './style.css'
-import fallbackImg from './assets/nuelliz-launch-tracker-cover.png'
+import fallbackImg from './assets/nuelliz-launch-tracker-cover.webp'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({

@@ -1,5 +1,5 @@
 import './style.css'
-import fallbackImg from './assets/mundayne-cover.png'
+import fallbackImg from './assets/mundayne-cover.webp'
 import { renderCaseStudy } from './case-study-template.js'
 
 renderCaseStudy({
