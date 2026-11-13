@@ -141,18 +141,6 @@ renderCaseStudy({
         'I used Claude to research (for example, which identity and police check providers operate in Nigeria), to compare ideas side by side, and to plan: turning the founder’s business plan into a brief, scoping the MVP and working out edge cases like pro-rated wages.',
         'I designed the screens in Figma with the founder actively involved. She set the money rules and reviewed the flows with me; when something was wrong, such as an early payment screen that showed families the fee split, we changed it. The pilot is where we will learn whether these decisions hold.'
       ]
-    },
-    {
-      label: 'What’s next',
-      title: 'What I want to test first.',
-      body: ['These are the assumptions I am least sure of, and how I would check each one during the pilot.'],
-      list: [
-        { title: 'Does the Verified badge earn trust on its own?', desc: 'Usability sessions with 5 families on the shortlist and profile screens: do they understand what was checked without seeing documents?' },
-        { title: 'Can staff-assisted intake replace a worker app?', desc: 'Time each assisted intake and count how many workers needed one.' },
-        { title: 'Is SMS enough for workers?', desc: 'Track how many workers call or message ops with questions the SMS should have answered.' },
-        { title: 'Does offline sync survive real Abuja signal?', desc: 'Shadow two officers for a week of visits and log every failed or delayed sync.' },
-        { title: 'Are the Match weights right?', desc: 'Compare staff overrides and their reasons with the scores, then retune.' }
-      ]
     }
   ],
 
