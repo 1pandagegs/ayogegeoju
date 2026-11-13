@@ -8,6 +8,7 @@ import resourceTrackrCover from './assets/resource-trackr-cover.webp'
 import sydaarLmsCover from './assets/sydaar-lms-cover.webp'
 import mundayneCover from './assets/mundayne-cover.webp'
 import nuellizCover from './assets/nuelliz-launch-tracker-cover.webp'
+import nuellizPlatformCover from './assets/nuelliz-platform-cover.webp'
 import gojuDesignCover from './assets/goju-design-cover.webp'
 import sabaliCover from './assets/sabali-limited-cover.webp'
 import manorrCover from './assets/manorr-cover.webp'
@@ -31,6 +32,15 @@ export const workTabs = [
 ]
 
 export const projects = [
+  {
+    title: 'Nuelliz Platform',
+    tags: ['product'],
+    featured: true,
+    label: 'Staffing / Verification Platform · 0 to 1',
+    desc: 'An MVP for verified domestic staffing in Abuja: ops console, client app, worker intake and an offline field app for home-visit checks.',
+    href: '/work-nuelliz-platform.html',
+    image: nuellizPlatformCover
+  },
   {
     title: 'Home and Abroad',
     tags: ['product'],

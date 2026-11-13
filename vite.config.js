@@ -18,6 +18,7 @@ export default defineConfig({
         prmt: resolve(__dirname, 'work-prmt.html'),
         mundayne: resolve(__dirname, 'work-mundayne.html'),
         nuelliz: resolve(__dirname, 'work-nuelliz.html'),
+        nuellizPlatform: resolve(__dirname, 'work-nuelliz-platform.html'),
         gojuDesign: resolve(__dirname, 'work-goju-design.html'),
         sabali: resolve(__dirname, 'work-sabali.html'),
         amfh: resolve(__dirname, 'work-amfh.html'),

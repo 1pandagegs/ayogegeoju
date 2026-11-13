@@ -3,6 +3,43 @@ import logoImg from './assets/logo.png'
 import fallbackImg from './assets/coverage-trackr-cover.webp'
 import { arrow } from './icons.js'
 
+function renderChapters(project) {
+  if (!project.chapters || !project.chapters.length) return ''
+  return project.chapters.map(ch => `
+    <section class="max-w-[1600px] mx-auto mt-28">
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
+        <div class="lg:sticky lg:top-28">
+          <p class="text-sm uppercase tracking-[0.25em] text-[#3082BE] mb-5">${ch.label}</p>
+          <h2 class="text-4xl md:text-5xl font-bold leading-[0.95] tracking-[-0.05em]">${ch.title}</h2>
+        </div>
+        <div class="rounded-[34px] border border-white/80 glass p-7 md:p-8">
+          <div class="space-y-6 text-lg text-slate-500 leading-relaxed">
+            ${(ch.body || []).map(p => `<p>${p}</p>`).join('')}
+          </div>
+          ${ch.list && ch.list.length ? `
+            <ul class="mt-6 space-y-4">
+              ${ch.list.map(item => `
+                <li class="rounded-[22px] border border-white/80 glass p-5">
+                  ${item.title ? `<p class="font-semibold text-[#0b1530] mb-1">${item.title}</p>` : ''}
+                  <p class="text-slate-500 leading-relaxed">${item.desc}</p>
+                </li>
+              `).join('')}
+            </ul>
+          ` : ''}
+        </div>
+      </div>
+      ${ch.image ? `
+        <figure class="mt-10 rounded-[34px] border border-white/80 glass p-3">
+          <div class="media-frame">
+            <img src="${ch.image}" alt="${ch.caption || ch.title}" loading="lazy" class="w-full h-auto block" />
+          </div>
+          ${ch.caption ? `<figcaption class="px-3 pt-4 pb-2 text-sm text-slate-500">${ch.caption}</figcaption>` : ''}
+        </figure>
+      ` : ''}
+    </section>
+  `).join('')
+}
+
 function renderSections(project) {
   if (!project.sections || !project.sections.length) return ''
   return `
@@ -203,6 +240,8 @@ export function renderCaseStudy(project) {
             </div>
           </div>
         </section>
+
+${renderChapters(project)}
 
 ${renderSections(project)}
 
