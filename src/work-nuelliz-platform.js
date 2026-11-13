@@ -17,7 +17,7 @@ renderCaseStudy({
     { label: 'Role', value: 'Product designer (sole designer)' },
     { label: 'Client', value: 'Nuelliz Support, with founder approval' },
     { label: 'Scope', value: '4 surfaces · 40+ screens · design system' },
-    { label: 'Status', value: 'Build next (Next.js) · Abuja pilot Apr–Jul 2027' }
+    { label: 'Status', value: 'MVP design complete · in founder review' }
   ],
 
   overviewTitle: 'When you hire someone into your home, trust is the product.',
