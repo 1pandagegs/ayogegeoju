@@ -9,6 +9,7 @@ export default defineConfig({
         work: resolve(__dirname, 'work.html'),
         about: resolve(__dirname, 'about.html'),
         contact: resolve(__dirname, 'contact.html'),
+        cv: resolve(__dirname, 'cv.html'),
         coverageTrackr: resolve(__dirname, 'work-coverage-trackr.html'),
         homeAndAbroad: resolve(__dirname, 'work-home-and-abroad.html'),
         hemoTrackr: resolve(__dirname, 'work-hemo-trackr.html'),
